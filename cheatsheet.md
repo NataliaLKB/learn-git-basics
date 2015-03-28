@@ -17,4 +17,3 @@
 
 ##### Deleting a branch
 		git branch -d <branch name>
-
