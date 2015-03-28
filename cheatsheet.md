@@ -17,3 +17,21 @@
 
 ##### Deleting a branch
 		git branch -d <branch name>
+
+##### Moving your changes to the staging area
+        git add <file name>
+
+##### Committing your changes
+        git commit -m '<commit message here>'
+
+##### Pushing your commit to the remote repository
+        git push origin <branch name>
+
+##### Creating a branch and moving onto it.
+        git checkout -b <new branch name>
+
+##### Merging changes from another branch, to your current branch
+        git merge <branch you want to merge with your current branch>
+
+##### Pulling remote changes into your local repo
+        git pull origin <branch name>
