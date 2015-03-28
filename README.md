@@ -34,31 +34,30 @@ The *introduction to Git* is aimed at the first week of the course. The hope is 
 
 This introduction to Git is aimed at first week students of [Founders & Coders](http://foundersandcoders.org/) 8 week coding academy. The hope is that this introduction will cover all you need to know to start collaborating on code with your fellow teammates. 
 
-<a name="terminology"></a>
-## Terminology
+## Terminology <a id="terminology" name="terminology"></a>
 
-*Repository (repo)*
+##### *Repository (repo)*
 	Simply put, this is your project folder. This repository can be located locally (in your file system on your computer), or remotely (on Github). Either way, it is the same repository.
 
-*Version Control*
+##### *Version Control*
 	We will use Git for this. A way of keeping track of changes in the code which makes it possible to work with multiple developers on the same repo.
 
-*Git*
+##### *Git*
 	A version control system.
 
-*Github*
+##### *Github*
 	A remote location where you can store you code, and which all the members of the team have access to. Think of it like a dropbox for code. One of the big differences however is most repositories on github are public. Anybody can see your code.
 
-*Commit*
+##### *Commit*
 	A way of saving your code at different points along the project. Unlike many tools you may have used however, all commits are saved. This creates a project history and a way to track changes. 
 
-*Branches*
+##### *Branches*
 	As you work on a git repo the first branch you are on is usually the default branch. This is often called `master`. If you start working on a section of the website (say the footer styling), it is best practise to create your own branch for that feature. Creating your own branch is like taking a copy of `master` and renaming it. When you commit, they will now be on that new branch only. 
 
 	In the sections below we will walk through how to do this. For the meantime, just note that you always have one default branch, and can have as many other branches as needed.
 
-<a name="version-control"></a>
-## Why Version Control
+
+## Why Version Control <a name="version-control" id="version-control"></a>
 
 ##### Code Base History
 Git can provide you with a complete history of every commit made on a project. Benefits include:
@@ -79,19 +78,19 @@ We will practice with this later.
 ##### Branching
 A good work flow with git always involves branching. Having branches helps organise the code, and keep track of who is working on what.
 
-<a name="tutorial"></a>
-## Tutorial
+
+## Tutorial <a name="tutorial" id="tutorial"></a>
 
 Before we begin, if you don't have a Github account, please get one.
 
 Next please fork this repository.
 
-![fork button on github](./img/red-oval.png)
+![fork button on github](./img/fork.png)
 
 On your local machine, please make sure you have git installed. If you are using a mac, please install with brew. Windows use http://git-scm.com/download/win. and Linux install using these instructions http://git-scm.com/download/linux.
 
-<a name="getting-started"></a>
-Getting Starting
+
+Getting Starting <a name="getting-started" id="getting-started"></a>
 The next step is to clone the forked version of this repository. Copy the url shown here: 
 <picture of github repo>
 Then use the command in your terminal:
@@ -109,8 +108,8 @@ You should see something like this in your terminal now:
 <picture of terminal>
 the branch name in green is the current branch you are on. In this case it is `master`.
 
-<a name="branching"></a>
-Branching
+
+Branching <a name="branching" id="branching"></a>
 The next step is to create your own branch to work on. try this:
     git branch new-branch
 It is best to try to name your branches as specific as possible, so not to confuse them with any others. There are many naming conventions out there for branches, but for this week simply try to name them off of a feature. For example (`navbar-collapse` or `sass-file-structure`). To see all your branches:
@@ -124,8 +123,8 @@ Now you can see you are on that branch. Go back to master and now we are going t
     git branch
 As you can see, your branch is now gone. 
 
-<a name="changes"></a>
-Making Changes
+
+Making Changes <a name="changes" id="changes"></a>
 Now it is time to make some changes in the project. Make yourself a new branch named `update-cheatsheet` and go onto it. open up the file cheatsheet.md in your favourite test editor (I would recommend sublime or atom. 
 As you can see, this contains all the commands you will need to begin using git. Continue to add to it all the new commands you learn. To begin, here is a command that both creates a branch, and moves you onto it at the same time:
     git checkout -b <new branch name>
@@ -141,8 +140,8 @@ Now you can see the file name has turned green. Now to commit your changes.
     git status
 The message could be anything, but it is best to make it something that describes what you just did.
 
-<a name="merging"></a>
-Merging Changes with Master
+
+Merging Changes with Master <a name="merging" id="merging"></a>
 Now that you have made and committed your changes, it is time to merge your branch with master. Even though you are not working with anyone else on this repository, it is always good practice to make sure your current branch is completely up to date with master. Checkout back onto master and pull down. This command looks like this:
     git checkout master
     git pull origin master
@@ -157,14 +156,14 @@ Make a PR to master. Now merge, and delete your branch.
 <pictures here>
 Return to your terminal and navigate to your local master branch. Pull down. You will see your branch update (fast-forward). delete the branch `update-cheatsheet`. 
 
-<a name="conflicts"></a>
-Merge Conflicts
-Check all the branches on this repository. You will see a branch called merging-experiments. Go onto it. git 
+
+Merge Conflicts <a name="conflicts" id="conflicts"></a>
+Check all the branches on this repository. You will see a branch called merging-experiments. Go onto it.
 
 
 
-<a name="github-flow"></a>
-## Github Flow
+
+## Github Flow <a name="github-flow" id="github-flow"></a>
 
 
 
