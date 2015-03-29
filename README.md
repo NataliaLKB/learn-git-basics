@@ -39,24 +39,24 @@ This introduction to Git is aimed at first week students of [Founders & Coders](
 ## Terminology
 
 ##### *Repository (repo)*
-	Simply put, this is your project folder. This repository can be located locally (in your file system on your computer), or remotely (on Github). Either way, it is the same repository.
+Simply put, this is your project folder. This repository can be located locally (in your file system on your computer), or remotely (on Github). Either way, it is the same repository.
 
 ##### *Version Control*
-	We will use Git for this. A way of keeping track of changes in the code which makes it possible to work with multiple developers on the same repo.
+We will use Git for this. A way of keeping track of changes in the code which makes it possible to work with multiple developers on the same repo.
 
 ##### *Git*
-	A version control system.
+A version control system.
 
 ##### *Github*
-	A remote location where you can store you code, and which all the members of the team have access to. Think of it like a dropbox for code. One of the big differences however is most repositories on github are public. Anybody can see your code.
+A remote location where you can store you code, and which all the members of the team have access to. Think of it like a dropbox for code. One of the big differences however is most repositories on github are public. Anybody can see your code.
 
 ##### *Commit*
-	A way of saving your code at different points along the project. Unlike many tools you may have used however, all commits are saved. This creates a project history and a way to track changes. 
+A way of saving your code at different points along the project. Unlike many tools you may have used however, all commits are saved. This creates a project history and a way to track changes. 
 
 ##### *Branches*
-	As you work on a git repo the first branch you are on is usually the default branch. This is often called `master`. If you start working on a section of the website (say the footer styling), it is best practise to create your own branch for that feature. Creating your own branch is like taking a copy of `master` and renaming it. When you commit, they will now be on that new branch only. 
+As you work on a git repo the first branch you are on is usually the default branch. This is often called `master`. If you start working on a section of the website (say the footer styling), it is best practise to create your own branch for that feature. Creating your own branch is like taking a copy of `master` and renaming it. When you commit, they will now be on that new branch only. 
 
-	In the sections below we will walk through how to do this. For the meantime, just note that you always have one default branch, and can have as many other branches as needed.
+In the sections below we will walk through how to do this. For the meantime, just note that you always have one default branch, and can have as many other branches as needed.
 
 
 <a name="version-control" id="version-control"></a>
@@ -65,11 +65,11 @@ This introduction to Git is aimed at first week students of [Founders & Coders](
 ##### Code Base History
 Git can provide you with a complete history of every commit made on a project. Benefits include:
 
-	* Being able to see what differences to the file system you have made before you have commited.
+* Being able to see what differences to the file system you have made before you have commited.
 
-	* Being able to see what differences exist between commits
+* Being able to see what differences exist between commits
 
-	* Being able to move between difference commits (or places in time). This is especially useful if something became broken while you were working on it, and you need to start again.
+* Being able to move between difference commits (or places in time). This is especially useful if something became broken while you were working on it, and you need to start again.
 
 In the introduction section of this tutorial, we won't be able to cover all these benefits in practise extensively. However, we will aim to give you all the information you will need to know by the end.
 
