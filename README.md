@@ -1,10 +1,12 @@
 # Introduction to Git and Version Control
 
-This tutorial is targeted towards the students of Founders & Coders 8 week Coding Academy. Feedback or Suggestions (raised as an issue) or contributions (a pull request) are appreciated.
+This tutorial is targeted towards the students of Founders & Coders 8 week coding Academy. Feedback or Suggestions in the format of an issue or contributions as a pull request are appreciated.
 
-As a student, if you get stuck at any point, please open an issue and I will try to get back to you as soon as possible, or update the tutorial. If you would prefer, feel free to contact me on Gitter (search NataliaLKB).
+As a student, if you get stuck at any point, please open an issue and I will try to get back to you as soon as possible. If you would prefer, feel free to contact me on Gitter. When the issue is solved, do think about making a pull request to the project.
 
-The *introduction to Git* is aimed at the first week of the course. The hope is that this introduction will cover all you need to know to start collaborating on code with your fellow teammates.
+The introduction to Git is aimed at the first week of the course. The hope is that this introduction will cover all you need to know to start collaborating on code with your fellow teammates.
+
+Git for Collaboration is aimed at the second week students of the course. Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
 
 
 # Contents
@@ -18,6 +20,14 @@ The *introduction to Git* is aimed at the first week of the course. The hope is 
 	* [Merging with Master](#merging)
 	* [Merge Conflicts](#conflicts)
 4. [Introducing Github Flow](#github-flow)
+
+#### Git for Collaboration
+1. [More important terminology]()
+2. [The Timeline]()
+3. [What does a git commit mean?]()
+    * [When should you commit]()
+    * [Commit messages]()
+4. [More about branches and Flows]()
 
 
 #### In Practice
@@ -117,16 +127,32 @@ the branch name in green is the current branch you are on. In this case it is `m
 <a name="branching" id="branching"></a>
 ### Branching
 The next step is to create your own branch to work on. try this:
-    git branch new-branch
+
+```
+git branch new-branch
+```
+
 It is best to try to name your branches as specific as possible, so not to confuse them with any others. There are many naming conventions out there for branches, but for this week simply try to name them off of a feature. For example (`navbar-collapse` or `sass-file-structure`). To see all your branches:
-    git branch
+
+```
+git branch
+```
+
 As you can see, you have created your branch, but are not currently on it. To navigate onto it please:
-    git checkout new-branch
-    git branch
+
+```
+git checkout new-branch
+git branch
+```
+
 Now you can see you are on that branch. Go back to master and now we are going to delete `new-branch`.
-    git checkout master    
-    git branch -d new-branch
-    git branch
+
+```
+git checkout master    
+git branch -d new-branch
+git branch
+```
+
 As you can see, your branch is now gone. 
 
 
@@ -134,30 +160,54 @@ As you can see, your branch is now gone.
 ### Making Changes
 Now it is time to make some changes in the project. Make yourself a new branch named `update-cheatsheet` and go onto it. open up the file cheatsheet.md in your favourite test editor (I would recommend sublime or atom. 
 As you can see, this contains all the commands you will need to begin using git. Continue to add to it all the new commands you learn. To begin, here is a command that both creates a branch, and moves you onto it at the same time:
-    git checkout -b <new branch name>
+
+```
+git checkout -b <new branch name>
+```
+
 Add that command, and its description to cheatsheet.md and save it. Now in your terminal:
     git status
 You will see something like this:
 <picture of terminal>
 You will see your changes in red. now we need to add them to the git staging area. Doing this is like telling git to pay attention to these files, and start tracking the changes. To do this write this command:
-    git add cheatsheet.md
-    git status
+
+```
+git add cheatsheet.md
+git status
+```
+
 Now you can see the file name has turned green. Now to commit your changes.
-    git commit -m 'adding new command in the cheatsheet'
-    git status
+    
+```
+git commit -m 'adding new command in the cheatsheet'
+git status
+```
+
 The message could be anything, but it is best to make it something that describes what you just did.
 
 
 <a name="merging" id="merging"></a>
 ### Merging Changes with Master
 Now that you have made and committed your changes, it is time to merge your branch with master. Even though you are not working with anyone else on this repository, it is always good practice to make sure your current branch is completely up to date with master. Checkout back onto master and pull down. This command looks like this:
-    git checkout master
-    git pull origin master
+
+```
+git checkout master
+git pull origin master
+```
+
 Pulling down means that you are getting any recent changes from the remote master branch which is located in Github. Next go back to your branch (`update-cheatsheet`)  and merge with master.
-    git merge master
+
+```
+git merge master
+```
+
 Even though in this situation there isn't any changes to merge, it is best to get in the habit on going through these steps in your work flow. Merging like this means taking any possible changes in master and merging them with the branch you are currently on.
 After you merge with master you have to push your changes to the remote repo (Github). 
-    git push origin update-cheatsheet
+
+```
+git push origin update-cheatsheet
+```
+
 Go to your browser and open up this repository in github. Press on branches, and then on PR
 <pictures here>
 Make a PR to master. Now merge, and delete your branch. 
@@ -168,7 +218,11 @@ Return to your terminal and navigate to your local master branch. Pull down. You
 <a name="conflicts" id="conflicts"></a>
 ### Merge Conflicts
 Check all the branches on this repository. You will see a branch called merging-experiments. Checkout onto it and open up the git cheatsheet, as you can see there are some differences between this and master. To see these differences use command:
-    git diff master
+
+```
+git diff master
+```
+
 The differences in green and the additions on this branch, that don't exist on master. The red are the things that are on master, that don't exist on this branch.
 Merge with master. You should have a git conflict that looks something like this:
 <picture of merge conflict>
