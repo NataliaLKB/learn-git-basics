@@ -24,20 +24,13 @@ Git for Collaboration is aimed at the second week students of the course. Even t
 #### [Git for Collaboration](#git-collaboration)
 1. [Further terminology](#further-terminology)
 2. [The Timeline](#timeline)
-3. [What does a git commit mean?](#commits)
+3. [Committing](#commits)
     * [When should you commit](#when-commit)
     * [Commit messages](#commit-message)
 4. [More about branches and Flows](#final flows)
 
+#### [Resources](#resources)
 
-#### In Practice
-- What you will need to get competent at by the end of the 8th week
-
-1. More about feature branches
-2. What is a commit?
-3. About commit messages
-4. When to add and commit?
-5. How to merge commits together --> complex git 
 
 
 <a id="introduction" name="introduction"></a>
@@ -108,21 +101,30 @@ On your local machine, please make sure you have git installed. If you are using
 <a name="getting-started" id="getting-started"></a>
 ### Getting Starting
 The next step is to clone the forked version of this repository. Copy the url shown here: 
-<picture of github repo>
+
+![where to copy url on github](./img/git-clone.png)
+
 Then use the command in your terminal:
-    git clone <copied url>
+
+```
+git clone https://github.com/NataliaLKB/learn-git-basics.git
+```
+
 Next, it is good to get in the habit after each command to use `git status`. Let us use it now. 
-    git status
+
+```
+git status
+````
+
 Now check which branch you are on:
-    git branch
+
+```
+git branch
+```
+
 You should only see `master` which is the default branch in this repo.
-For this tutorial, also use the command:
-    git fetch --all
-    git branch
-Git fetch --all will fetch all the other branches in this repository, not just the default one.
-You should see something like this in your terminal now:
-<picture of terminal>
-the branch name in green is the current branch you are on. In this case it is `master`.
+
+When there are other branches in your repo the green branch is the current one you are on.
 
 
 <a name="branching" id="branching"></a>
@@ -159,7 +161,8 @@ As you can see, your branch is now gone.
 
 <a name="changes" id="changes"></a>
 ### Making Changes
-Now it is time to make some changes in the project. Make yourself a new branch named `update-cheatsheet` and go onto it. open up the file cheatsheet.md in your favourite test editor (I would recommend sublime or atom. 
+Now it is time to make some changes in the project. Make yourself a new branch named `update-cheatsheet` and go onto it. open up the file cheatsheet.md in your favourite test editor.
+
 As you can see, this contains all the commands you will need to begin using git. Continue to add to it all the new commands you learn. To begin, here is a command that both creates a branch, and moves you onto it at the same time:
 
 ```
@@ -167,9 +170,15 @@ git checkout -b <new branch name>
 ```
 
 Add that command, and its description to cheatsheet.md and save it. Now in your terminal:
-    git status
+
+```
+git status
+```
+
 You will see something like this:
-<picture of terminal>
+
+![git status example](./img/git-status.png)
+
 You will see your changes in red. now we need to add them to the git staging area. Doing this is like telling git to pay attention to these files, and start tracking the changes. To do this write this command:
 
 ```
@@ -209,16 +218,38 @@ After you merge with master you have to push your changes to the remote repo (Gi
 git push origin update-cheatsheet
 ```
 
-Go to your browser and open up this repository in github. Press on branches, and then on PR
-<pictures here>
-Make a PR to master. Now merge, and delete your branch. 
-<pictures here>
-Return to your terminal and navigate to your local master branch. Pull down. You will see your branch update (fast-forward). delete the branch `update-cheatsheet`. 
+Go to your browser and open up this repository in github. Press the branches button
+
+![branches button in gitub](./img/github-branch.png)
+
+And then make a Pull Request to master
+
+![viewing all your branches on github](./img/view-github-branches.png)
+
+Now merge, and delete your branch. 
+
+Return to your terminal and navigate to your local master branch. Pull down. You will see your branch update (fast-forward). Delete the branch `update-cheatsheet`. 
 
 
 <a name="conflicts" id="conflicts"></a>
 ### Merge Conflicts
-Check all the branches on this repository. You will see a branch called merging-experiments. Checkout onto it and open up the git cheatsheet, as you can see there are some differences between this and master. To see these differences use command:
+Check all the branches on this repository, even the remote ones. To do this use this command:
+
+```
+git branch -a
+```
+
+You should see something like this:
+
+![see all branches in github](./img/git-branch-a.png)
+
+Run the command:
+
+```
+git checkout merging-experiments
+```
+
+You will see a branch called merging-experiments. Checkout onto it and open up the git cheatsheet, as you can see there are some differences between this and master. To see these differences use command:
 
 ```
 git diff master
@@ -226,9 +257,12 @@ git diff master
 
 The differences in green and the additions on this branch, that don't exist on master. The red are the things that are on master, that don't exist on this branch.
 Merge with master. You should have a git conflict that looks something like this:
-<picture of merge conflict>
+
+![git merge conflict example](./img/merge-conflict.png)
+
 Do you see the lines at the top. The first section is labelled `HEAD` those are from this branch. The next section is from master. Delete the lines, and any other code you want until the cheatsheet looks like how you want it to look. 
 Afterwards git status, add the files in red, commit, and push. Then make a PR to master like before and merge. Don't forget to update your local master branch, and delete the merged branch in Github and in your local repo. It is good to keep your working environments clean and organised. 
+
 
 <a name="github-flow" id="github-flow"></a>
 ## Github Flow
@@ -245,14 +279,17 @@ http://scottchacon.com/2011/08/31/github-flow.html
 <a name="git-collaboration" id="git-collaboration"></a>
 # Git for Collaboration
 
+Git for Collaboration is aimed at the second week students of the course. Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
+
+
 <a name="further-terminology" id="further-terminology"></a>
 ## Further Terminology
 
-Commit Hash:
-<picture>
+##### Commit Hash:
+![commit hash picture](./img/commit-hash.png)
 
-HEAD
-<to do>
+##### HEAD
+Simply put, the HEAD is a reference to a commit object. For more information see: http://eagain.net/articles/git-for-computer-scientists/
 
 
 <a name="timeline" id="timeline"></a>
@@ -263,29 +300,58 @@ As discussed previously git stores all the commits on the project. You can use t
 Before we start make sure you have a terminal open located at the local copy of this repo. The same one that was used for the first tutorial is essential. Make a new branch called `timeline-practice` and navigate onto it.
 
 Make a new directory in the project via the command line. Lets call it `time`. 
+
+```
 mkdir time
+```
+
 Also make a new file in that directory and call it whatever you like. A simple text file should be fine. After you are done, open it.
+
+```
 touch time/newfile.txt
 open time/newfile.txt
+```
+
 Write the current time stamp, and a short message to your future self. Save it. Next add and commit your changes. Your commit message should be descriptive of what you just did.
 Repeat step 2 twice more, deleting the previous time and message, and adding the new time and a different message. Make sure you add and commit each time. Make sure your commit messages are unique, and you can tell which one was first, second, and third.
 Next type in this command:
+
+```
 git log
+```
+
 You should see something like this:
-<picture of git log>
+
+![git merge conflict example](./img/merge-conflict.png)
+
+
 Pick the second time commit that you made and copy the hash. Use `q` to exit the log and checkout to your commit.
+
+```
 git checkout <commit hash>
 git status
-<picture of status>
+```
+
+![git detached head warning](./img/detached-head.png)
+
+
 As you can see after you checkout a message appears informing your that you are in a 'detached HEAD' state, meaning your are not working on any current branch. Open up the file in the time folder and look at the time and message. It should be the 2nd one that you wrote. 
 Repeat step 6, and use the hash of the first time commit you made. Open the file and see that the time of your first commit, and your message to yourself. This is going back in time. You can easily go back as far as you like in the project and see older iterations of this tutorial!
-Next, we should go back to the future. The quickest and easiest way is to checkout onto the`timeline-practise` branch and you should be back up to date. However, you can also navigate back to the latest commit from where you are now. First, check `git log`. You will notice your latest commits are no longer on there. This is where another command is handy. `git reflog` is best used to find recently "lost" commits. you should see something like: 
-<picture of reflog>
+Next, we should go back to the future. The quickest and easiest way is to checkout onto the`timeline-practise` branch and you should be back up to date. However, you can also navigate back to the latest commit from where you are now. First, check `git log`. You will notice your latest commits are no longer on there. This is where another command is handy. `git reflog` is best used to find recently "lost" commits. you should see something like:
+
+![git reflog example](./img/git-reflog.png)
+
 Find the commit name of the last commit you did (the third time that you recorded) and copy the short hash in yellow. Checkout back to that commit, and `git diff timeline-practise` there should be no difference. 
 Checkout back to `timeline-practise` and push up to Github to make a PR to master. Make sure you first check that it is up to date with master locally.
 
 
-What does a git commit mean?
+<a name="commits" id="commits"></a>
+## Committing
+
+
+<a name="when-commit" id="when-commit"></a>
+## When should you commit?
+
 You should aim each commit to be a "safe" version of the project. This means that if you checkout to any commit in your timeline, that should reflect where the project was at that point, and be functional.
 
 Given that, when you commit is very important. I have heard two very useful guidelines. 
@@ -299,7 +365,9 @@ Through my research I have come across many different methodologies, and ultimat
 Likewise, even in Pull Requests, you must aim to make your commits a clear and concise summary of what tasks where completed on that branch. That way the person reviewing your PR understands what they will be reviewing before looking at the code itself.
 
 
-Commit messages
+<a name="commit-message" id="commit-message"></a>
+## Commit messages
+
 Just like choosing when to commit, and what to commit, it is also important to think about your naming. It is always good to be as descriptive as possible with your commit messages. 
 Also consider: 
 Present tense for your commit messages
@@ -312,13 +380,12 @@ Remember that the purpose of this commit is to be a message for future you, or y
 Many development teams take it one step further and turn their commit messages into change logs. These change logs may be used for user consumption making it all the more important to have clear messages of what was done for that commit.
 
 I tend to favour one line commits for simplicity, but many schools of thought out there prefer multiline commit messages. For examples of how to do this see:
-Commit message guidelines Angular:
-https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format
-Informative guidelines, and a cute cat filled slideshow:
-http://www.slideshare.net/TarinGamberini/commit-messages-goodpractices
+* [Commit message guidelines Angular](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format)
+* [Informative guidelines, and a cute cat filled slideshow](http://www.slideshare.net/TarinGamberini/commit-messages-goodpractices)
 
 
-More helpful RESOURCES:
+<a name="Resources" id="Resources"></a>
+# RESOURCES:
 
-http://gitreal.codeschool.com/
-https://www.atlassian.com/git/tutorials/
+* http://gitreal.codeschool.com/
+* https://www.atlassian.com/git/tutorials/
