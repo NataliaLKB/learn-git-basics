@@ -1,4 +1,4 @@
-# Git Command Cheat Sheet (separate this out)
+# Git Command Cheat Sheet
 
 ##### Cloning your remote directory
 		git clone <remote directory>
