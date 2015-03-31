@@ -1,6 +1,6 @@
 # Introduction to Git and Version Control
 
-This tutorial is targeted towards the students of Founders & Coders 8 week coding Academy. Feedback or Suggestions in the format of an issue or contributions as a pull request are appreciated.
+This tutorial is targeted towards the students of [Founders & Coders](http://foundersandcoders.org/) 8 week coding Academy. Feedback or Suggestions in the format of an issue or contributions as a pull request are appreciated.
 
 As a student, if you get stuck at any point, please open an issue and I will try to get back to you as soon as possible. If you would prefer, feel free to contact me on Gitter. When the issue is solved, do think about making a pull request to the project.
 
@@ -383,7 +383,7 @@ I tend to favour one line commits for simplicity, but many schools of thought ou
 * [Informative guidelines, and a cute cat filled slideshow](http://www.slideshare.net/TarinGamberini/commit-messages-goodpractices)
 
 
-<a name="Resources" id="Resources"></a>
+<a name="resources" id="resources"></a>
 # RESOURCES:
 
 * For generating ssh keys https://help.github.com/articles/generating-ssh-keys/
