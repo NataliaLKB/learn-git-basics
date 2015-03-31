@@ -10,7 +10,7 @@ Git for Collaboration is aimed at the second week students of the course. Even t
 
 
 # Contents
-#### Introduction
+#### [Introduction](#introduction)
 1. [Need to Know Terminology](#terminology)
 2. [Why Version Control](#version-control)
 3. [Tutorial](#tutorial)
@@ -21,13 +21,13 @@ Git for Collaboration is aimed at the second week students of the course. Even t
 	* [Merge Conflicts](#conflicts)
 4. [Introducing Github Flow](#github-flow)
 
-#### Git for Collaboration
-1. [More important terminology]()
-2. [The Timeline]()
-3. [What does a git commit mean?]()
-    * [When should you commit]()
-    * [Commit messages]()
-4. [More about branches and Flows]()
+#### [Git for Collaboration](#git-collaboration)
+1. [Further terminology](#further-terminology)
+2. [The Timeline](#timeline)
+3. [What does a git commit mean?](#commits)
+    * [When should you commit](#when-commit)
+    * [Commit messages](#commit-message)
+4. [More about branches and Flows](#final flows)
 
 
 #### In Practice
@@ -40,6 +40,7 @@ Git for Collaboration is aimed at the second week students of the course. Even t
 5. How to merge commits together --> complex git 
 
 
+<a id="introduction" name="introduction"></a>
 # Introduction
 
 This introduction to Git is aimed at first week students of [Founders & Coders](http://foundersandcoders.org/) 8 week coding academy. The hope is that this introduction will cover all you need to know to start collaborating on code with your fellow teammates. 
@@ -238,6 +239,83 @@ https://guides.github.com/introduction/flow/
 
 To find out why Github uses Github flow:
 http://scottchacon.com/2011/08/31/github-flow.html
+
+
+
+<a name="git-collaboration" id="git-collaboration"></a>
+# Git for Collaboration
+
+<a name="further-terminology" id="further-terminology"></a>
+## Further Terminology
+
+Commit Hash:
+<picture>
+
+HEAD
+<to do>
+
+
+<a name="timeline" id="timeline"></a>
+## The Timeline
+
+As discussed previously git stores all the commits on the project. You can use them as a timeline and travel back and forth in time. This section shows you a simple way of doing that which will come in handy as you work in projects with your team.
+
+Before we start make sure you have a terminal open located at the local copy of this repo. The same one that was used for the first tutorial is essential. Make a new branch called `timeline-practice` and navigate onto it.
+
+Make a new directory in the project via the command line. Lets call it `time`. 
+mkdir time
+Also make a new file in that directory and call it whatever you like. A simple text file should be fine. After you are done, open it.
+touch time/newfile.txt
+open time/newfile.txt
+Write the current time stamp, and a short message to your future self. Save it. Next add and commit your changes. Your commit message should be descriptive of what you just did.
+Repeat step 2 twice more, deleting the previous time and message, and adding the new time and a different message. Make sure you add and commit each time. Make sure your commit messages are unique, and you can tell which one was first, second, and third.
+Next type in this command:
+git log
+You should see something like this:
+<picture of git log>
+Pick the second time commit that you made and copy the hash. Use `q` to exit the log and checkout to your commit.
+git checkout <commit hash>
+git status
+<picture of status>
+As you can see after you checkout a message appears informing your that you are in a 'detached HEAD' state, meaning your are not working on any current branch. Open up the file in the time folder and look at the time and message. It should be the 2nd one that you wrote. 
+Repeat step 6, and use the hash of the first time commit you made. Open the file and see that the time of your first commit, and your message to yourself. This is going back in time. You can easily go back as far as you like in the project and see older iterations of this tutorial!
+Next, we should go back to the future. The quickest and easiest way is to checkout onto the`timeline-practise` branch and you should be back up to date. However, you can also navigate back to the latest commit from where you are now. First, check `git log`. You will notice your latest commits are no longer on there. This is where another command is handy. `git reflog` is best used to find recently "lost" commits. you should see something like: 
+<picture of reflog>
+Find the commit name of the last commit you did (the third time that you recorded) and copy the short hash in yellow. Checkout back to that commit, and `git diff timeline-practise` there should be no difference. 
+Checkout back to `timeline-practise` and push up to Github to make a PR to master. Make sure you first check that it is up to date with master locally.
+
+
+What does a git commit mean?
+You should aim each commit to be a "safe" version of the project. This means that if you checkout to any commit in your timeline, that should reflect where the project was at that point, and be functional.
+
+Given that, when you commit is very important. I have heard two very useful guidelines. 
+
+The first, is that a you complete the task assigned to you, you make several commits at different times during that task. In the end you merge all those commits together to make one very informative commit of that task. I will talk about ways to merge commits together in a later section.
+
+The second method is you work through your task and complete it before adding or committing at all. Then you check the status of the repo and see all the files you have changed. The next step is selectively adding and committing 
+
+Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extend of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named. 
+
+Likewise, even in Pull Requests, you must aim to make your commits a clear and concise summary of what tasks where completed on that branch. That way the person reviewing your PR understands what they will be reviewing before looking at the code itself.
+
+
+Commit messages
+Just like choosing when to commit, and what to commit, it is also important to think about your naming. It is always good to be as descriptive as possible with your commit messages. 
+Also consider: 
+Present tense for your commit messages
+If related to an issue on github, should contain issue number
+The first line should be 50 characters or less. Your message should be brief and to the point.
+Focus on why you did something, not how you did it
+Avoid `ands` . If you find yourself wanting to write `and`, you should probably break up that commit into multiple ones.
+Remember that the purpose of this commit is to be a message for future you, or your colleagues who may have not known what you are working on. Try to think about your message with this in mind.
+
+Many development teams take it one step further and turn their commit messages into change logs. These change logs may be used for user consumption making it all the more important to have clear messages of what was done for that commit.
+
+I tend to favour one line commits for simplicity, but many schools of thought out there prefer multiline commit messages. For examples of how to do this see:
+Commit message guidelines Angular:
+https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format
+Informative guidelines, and a cute cat filled slideshow:
+http://www.slideshare.net/TarinGamberini/commit-messages-goodpractices
 
 
 More helpful RESOURCES:
