@@ -324,7 +324,7 @@ git log
 
 You should see something like this:
 
-![git merge conflict example](./img/merge-conflict.png)
+![git log example](./img/git-log.png)
 
 
 Pick the second time commit that you made and copy the hash. Use `q` to exit the log and checkout to your commit.
@@ -344,7 +344,8 @@ Next, we should go back to the future. The quickest and easiest way is to checko
 ![git reflog example](./img/git-reflog.png)
 
 Find the commit name of the last commit you did (the third time that you recorded) and copy the short hash in yellow. Checkout back to that commit, and `git diff timeline-practise` there should be no difference. 
-Checkout back to `timeline-practise` and push up to Github to make a PR to master. Make sure you first check that it is up to date with master locally.
+Checkout back to `timeline-practise` and push up to Github to make a PR to master. Make sure you first check that 
+it is up to date with master locally.
 
 
 <a name="commits" id="commits"></a>
