@@ -27,6 +27,7 @@ Git for Collaboration is aimed at the second week students of the course. Even t
 3. [Committing](#commits)
     * [When should you commit](#when-commit)
     * [Commit messages](#commit-message)
+    * [Merging commits](#merging-commits)
 
 #### [Resources](#resources)
 
@@ -381,6 +382,35 @@ Many development teams take it one step further and turn their commit messages i
 I tend to favour one line commits for simplicity, but many schools of thought out there prefer multiline commit messages. For examples of how to do this see:
 * [Commit message guidelines Angular](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format)
 * [Informative guidelines, and a cute cat filled slideshow](http://www.slideshare.net/TarinGamberini/commit-messages-goodpractices)
+
+
+<a id="merging-commits" name="merging-commits"></a>
+## Merging Commits
+
+Often you will find yourself wanting to merge commits, or organising your early commits slightly differently on a branch to better demonstrate what you worked on. I will briefly go through one easy way to do this.
+
+#### Reset Soft
+This is my preferred method of merging commits together. It leaves you with lots of flexibility.
+
+To begin, make a new branch and make some new files and commit regularly (at least twice). 
+
+Next `git log` and pick the 3rd most recent hash. Copy it and:
+
+```
+git reset --soft <commit hash>
+git status
+git log
+```
+
+Your working directory shouldn't changes, but all the files that you changed should be in green. Your log should have the newest commit as the hash you copied. Even though all your work is still the same as before the reset, the commits are different. Then you can commit again and this is an easy way to replace 2 or more commits with one commit.
+
+
+For more information and techiques see:
+
+* [What to learn more about reset?](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting/commit-level-operations)
+* [Only want to ammend the previous commit?](https://www.atlassian.com/git/tutorials/rewriting-history/)
+* [The Golden Rule of Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/the-golden-rule-of-rebasing)
+
 
 
 <a name="resources" id="resources"></a>
