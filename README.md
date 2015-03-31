@@ -109,6 +109,8 @@ Then use the command in your terminal:
 git clone https://github.com/NataliaLKB/learn-git-basics.git
 ```
 
+You should now be ablle to redirect into the directory just created using the command line.
+
 Next, it is good to get in the habit after each command to use `git status`. Let us use it now. 
 
 ```
@@ -160,7 +162,7 @@ As you can see, your branch is now gone.
 
 <a name="changes" id="changes"></a>
 ### Making Changes
-Now it is time to make some changes in the project. Make yourself a new branch named `update-cheatsheet` and go onto it. open up the file cheatsheet.md in your favourite test editor.
+Now it is time to make some changes in the project. Make yourself a new branch named `update-cheatsheet` and go onto it. open up the file cheatsheet.md in your favourite text editor.
 
 As you can see, this contains all the commands you will need to begin using git. Continue to add to it all the new commands you learn. To begin, here is a command that both creates a branch, and moves you onto it at the same time:
 
