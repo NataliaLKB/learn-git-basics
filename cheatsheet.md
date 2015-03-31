@@ -1,37 +1,37 @@
 # Git Command Cheat Sheet
 
 ##### Cloning your remote directory
-    git clone <remote directory>
+        git clone <remote directory>
 
 ##### Checking that status of your local repository
-    git status
+        git status
 
 ##### Pulling down all branches in a remote repo, not just the default branch
-    git fetch --all
+        git fetch --all
 
 ##### Creating a new branch for you to work on
-    git branch <new branch name>
+        git branch <new branch name>
 
 ##### Moving onto a branch
-    git checkout <branch name>
+        git checkout <branch name>
 
 ##### Deleting a branch
-    git branch -d <branch name>
+		git branch -d <branch name>
 
 ##### Moving your changes to the staging area
-    git add <file name>
+        git add <file name>
 
-##### ommitting your changes
-    git commit -m '<commit message here>'
+##### Committing your changes
+        git commit -m '<commit message here>'
 
 ##### Pushing your commit to the remote repository
-    git push origin <branch name>
+        git push origin <branch name>
 
 ##### Creating a branch and moving onto it.
-    git checkout -b <new branch name>
+        git checkout -b <new branch name>
 
 ##### Merging changes from another branch, to your current branch
-    git merge <branch you want to merge with your current branch>
+        git merge <branch you want to merge with your current branch>
 
 ##### Pulling remote changes into your local repo
-    git pull origin <branch name>
+        git pull origin <branch name>
