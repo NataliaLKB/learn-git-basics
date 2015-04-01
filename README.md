@@ -220,6 +220,8 @@ After you merge with master you have to push your changes to the remote repo (Gi
 git push origin update-cheatsheet
 ```
 
+When you pull or push you you are usually referring to your remote repo, or origin. In the example of `git push origin <branch name>` you are pushing your local changes to a remote branch that you are specifying. It is best practise, and makes things much simpler if you use the same name for your remote branch, as your local one. 
+
 Go to your browser and open up this repository in github. Press the branches button
 
 ![branches button in gitub](./img/github-branch.png)
