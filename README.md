@@ -224,7 +224,7 @@ Go to your browser and open up this repository in github. Press the branches but
 
 ![branches button in gitub](./img/github-branch.png)
 
-And then make a Pull Request to master
+And then make a pull request  to master
 
 ![viewing all your branches on github](./img/view-github-branches.png)
 
@@ -263,7 +263,7 @@ Merge with master. You should have a git conflict that looks something like this
 ![git merge conflict example](./img/merge-conflict.png)
 
 Do you see the lines at the top. The first section is labelled `HEAD` those are from this branch. The next section is from master. Delete the lines, and any other code you want until the cheatsheet looks like how you want it to look. 
-Afterwards git status, add the files in red, commit, and push. Then make a PR to master like before and merge. Don't forget to update your local master branch, and delete the merged branch in Github and in your local repo. It is good to keep your working environments clean and organised. 
+Afterwards git status, add the files in red, commit, and push. Then make a pull request to master like before and merge. Don't forget to update your local master branch, and delete the merged branch in Github and in your local repo. It is good to keep your working environments clean and organised. 
 
 
 <a name="github-flow" id="github-flow"></a>
@@ -344,7 +344,7 @@ Next, we should go back to the future. The quickest and easiest way is to checko
 ![git reflog example](./img/git-reflog.png)
 
 Find the commit name of the last commit you did (the third time that you recorded) and copy the short hash in yellow. Checkout back to that commit, and `git diff timeline-practise` there should be no difference. 
-Checkout back to `timeline-practise` and push up to Github to make a PR to master. Make sure you first check that 
+Checkout back to `timeline-practise` and push up to Github to make a pull request to master. Make sure you first check that 
 it is up to date with master locally.
 
 
@@ -365,7 +365,7 @@ The second method is you work through your task and complete it before adding or
 
 Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extend of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named. 
 
-Likewise, even in Pull Requests, you must aim to make your commits a clear and concise summary of what tasks where completed on that branch. That way the person reviewing your PR understands what they will be reviewing before looking at the code itself.
+Likewise, even in pull requests, you must aim to make your commits a clear and concise summary of what tasks where completed on that branch. That way the person reviewing your pull request understands what they will be reviewing before looking at the code itself.
 
 
 <a name="commit-message" id="commit-message"></a>
