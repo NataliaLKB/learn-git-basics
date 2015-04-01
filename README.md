@@ -195,12 +195,12 @@ git commit -m 'adding new command in the cheatsheet'
 git status
 ```
 
-The message could be anything, but it is best to make it something that describes what you just did. You can also use the command `git commit` without `-m '<message'`, however beware that it will send you to a text editor called Vim. Though learning how to use Vim is important, it isn't necessary at this stage. Typing `:q` straight away will get you out of it and re-commit with a message.
+The message could be anything, but it is best to make it something that describes what you just did. You can also use the command `git commit` without `-m '<message'`, however beware that it will send you to a text editor called Vim. Though learning how to use Vim is important, it isn't necessary at this stage. Typing `:q` straight away will get you out of it and commit again with a message.
 
 
 <a name="merging" id="merging"></a>
 ### Merging Changes with Master
-Now that you have made and committed your changes, it is time to merge your branch with master. Even though you are not working with anyone else on this repository, it is always good practice to make sure your current branch is completely up to date with master. Checkout back onto master and pull down. This command looks like this:
+Now that you have made and committed your changes, it is time to merge your branch with master. Even though you are not working with anyone else on this repository, it is always good practice to make sure your current branch is completely up to date with master. Imagine if you were working with a team. Someone else has already pushed up changes to master. If that someone else and yourself have changed the same file, it is quite likely that your changes will not be compatible with theirs. To avoid this, you want to merge your changes with theirs to avoid future problems. Checkout back onto master and pull down. These commands look like this:
 
 ```
 git checkout master
@@ -220,7 +220,7 @@ After you merge with master you have to push your changes to the remote repo (Gi
 git push origin update-cheatsheet
 ```
 
-When you pull or push you you are usually referring to your remote repo, or origin. In the example of `git push origin <branch name>` you are pushing your local changes to a remote branch that you are both creating, and naming. Since you are creating this branch from your local one it makes things much simpler if you use the same name for your remote branch, as your local one.
+When you pull or push you are referring to your remote repo, or origin. In the example of `git push origin <branch name>` you are pushing your local changes to a remote branch that you are both creating, and naming. Since you are creating this branch from your local one it makes things much simpler if you use the same name for your remote branch, as your local one.
 
 For more information on pushing, see [here](https://help.github.com/articles/pushing-to-a-remote/)
 
@@ -232,7 +232,7 @@ And then make a pull request  to master
 
 ![viewing all your branches on github](./img/view-github-branches.png)
 
-Now merge, and delete your branch. 
+Now merge, and delete your branch. Now your remote branch master is completely up to date with your latest changes.
 
 Return to your terminal and navigate to your local master branch. Pull down. You will see your branch update (fast-forward). Delete the branch `update-cheatsheet`. 
 
