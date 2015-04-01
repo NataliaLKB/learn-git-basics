@@ -195,7 +195,7 @@ git commit -m 'adding new command in the cheatsheet'
 git status
 ```
 
-The message could be anything, but it is best to make it something that describes what you just did.
+The message could be anything, but it is best to make it something that describes what you just did. You can also use the command `git commit` without `-m '<message'`, however beware that it will send you to a text editor called Vim. Though learning how to use Vim is important, it isn't necessary at this stage. Typing `:q` straight away will get you out of it and re-commit with a message.
 
 
 <a name="merging" id="merging"></a>
@@ -220,7 +220,9 @@ After you merge with master you have to push your changes to the remote repo (Gi
 git push origin update-cheatsheet
 ```
 
-When you pull or push you you are usually referring to your remote repo, or origin. In the example of `git push origin <branch name>` you are pushing your local changes to a remote branch that you are specifying. It is best practise, and makes things much simpler if you use the same name for your remote branch, as your local one. 
+When you pull or push you you are usually referring to your remote repo, or origin. In the example of `git push origin <branch name>` you are pushing your local changes to a remote branch that you are both creating, and naming. Since you are creating this branch from your local one it makes things much simpler if you use the same name for your remote branch, as your local one.
+
+For more information on pushing, see [here](https://help.github.com/articles/pushing-to-a-remote/)
 
 Go to your browser and open up this repository in github. Press the branches button
 
