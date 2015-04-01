@@ -195,12 +195,12 @@ git commit -m 'adding new command in the cheatsheet'
 git status
 ```
 
-The message could be anything, but it is best to make it something that describes what you just did.
+The message could be anything, but it is best to make it something that describes what you just did. You can also use the command `git commit` without `-m '<message'`, however beware that it will send you to a text editor called Vim. Though learning how to use Vim is important, it isn't necessary at this stage. Typing `:q` straight away will get you out of it and commit again with a message.
 
 
 <a name="merging" id="merging"></a>
 ### Merging Changes with Master
-Now that you have made and committed your changes, it is time to merge your branch with master. Even though you are not working with anyone else on this repository, it is always good practice to make sure your current branch is completely up to date with master. Checkout back onto master and pull down. This command looks like this:
+Now that you have made and committed your changes, it is time to merge your branch with master. Even though you are not working with anyone else on this repository, it is always good practice to make sure your current branch is completely up to date with master. Imagine if you were working with a team. Someone else has already pushed up changes to master. If that someone else and yourself have changed the same file, it is quite likely that your changes will not be compatible with theirs. To avoid this, you want to merge your changes with theirs to avoid future problems. Checkout back onto master and pull down. These commands look like this:
 
 ```
 git checkout master
@@ -220,15 +220,19 @@ After you merge with master you have to push your changes to the remote repo (Gi
 git push origin update-cheatsheet
 ```
 
+When you pull or push you are referring to your remote repo, or origin. In the example of `git push origin <branch name>` you are pushing your local changes to a remote branch that you are both creating, and naming. Since you are creating this branch from your local one it makes things much simpler if you use the same name for your remote branch, as your local one.
+
+For more information on pushing, see [here](https://help.github.com/articles/pushing-to-a-remote/)
+
 Go to your browser and open up this repository in github. Press the branches button
 
 ![branches button in gitub](./img/github-branch.png)
 
-And then make a Pull Request to master
+And then make a pull request  to master
 
 ![viewing all your branches on github](./img/view-github-branches.png)
 
-Now merge, and delete your branch. 
+Now merge, and delete your branch. Now your remote branch master is completely up to date with your latest changes.
 
 Return to your terminal and navigate to your local master branch. Pull down. You will see your branch update (fast-forward). Delete the branch `update-cheatsheet`. 
 
@@ -263,7 +267,7 @@ Merge with master. You should have a git conflict that looks something like this
 ![git merge conflict example](./img/merge-conflict.png)
 
 Do you see the lines at the top. The first section is labelled `HEAD` those are from this branch. The next section is from master. Delete the lines, and any other code you want until the cheatsheet looks like how you want it to look. 
-Afterwards git status, add the files in red, commit, and push. Then make a PR to master like before and merge. Don't forget to update your local master branch, and delete the merged branch in Github and in your local repo. It is good to keep your working environments clean and organised. 
+Afterwards git status, add the files in red, commit, and push. Then make a pull request to master like before and merge. Don't forget to update your local master branch, and delete the merged branch in Github and in your local repo. It is good to keep your working environments clean and organised. 
 
 
 <a name="github-flow" id="github-flow"></a>
@@ -344,7 +348,7 @@ Next, we should go back to the future. The quickest and easiest way is to checko
 ![git reflog example](./img/git-reflog.png)
 
 Find the commit name of the last commit you did (the third time that you recorded) and copy the short hash in yellow. Checkout back to that commit, and `git diff timeline-practise` there should be no difference. 
-Checkout back to `timeline-practise` and push up to Github to make a PR to master. Make sure you first check that 
+Checkout back to `timeline-practise` and push up to Github to make a pull request to master. Make sure you first check that 
 it is up to date with master locally.
 
 
@@ -365,7 +369,7 @@ The second method is you work through your task and complete it before adding or
 
 Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extend of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named. 
 
-Likewise, even in Pull Requests, you must aim to make your commits a clear and concise summary of what tasks where completed on that branch. That way the person reviewing your PR understands what they will be reviewing before looking at the code itself.
+Likewise, even in pull requests, you must aim to make your commits a clear and concise summary of what tasks where completed on that branch. That way the person reviewing your pull request understands what they will be reviewing before looking at the code itself.
 
 
 <a name="commit-message" id="commit-message"></a>
