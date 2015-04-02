@@ -255,18 +255,20 @@ Run the command:
 git checkout merging-experiments
 ```
 
-You will see a branch called merging-experiments. Checkout onto it and open up the git cheatsheet, as you can see there are some differences between this and master. To see these differences use command:
+Open up the git cheatsheet, as you can see there are some differences between this and master. To see these differences use command:
 
 ```
 git diff master
 ```
 
 The differences in green and the additions on this branch, that don't exist on master. The red are the things that are on master, that don't exist on this branch.
+
 Merge with master. You should have a git conflict that looks something like this:
 
 ![git merge conflict example](./img/merge-conflict.png)
 
 Do you see the lines at the top. The first section is labelled `HEAD` those are from this branch. The next section is from master. Delete the lines, and any other code you want until the cheatsheet looks like how you want it to look. 
+
 Afterwards git status, add the files in red, commit, and push. Then make a pull request to master like before and merge. Don't forget to update your local master branch, and delete the merged branch in Github and in your local repo. It is good to keep your working environments clean and organised. 
 
 
@@ -357,7 +359,7 @@ it is up to date with master locally.
 
 
 <a name="when-commit" id="when-commit"></a>
-## When should you commit?
+### When should you commit?
 
 You should aim each commit to be a "safe" version of the project. This means that if you checkout to any commit in your timeline, that should reflect where the project was at that point, and be functional.
 
@@ -373,7 +375,7 @@ Likewise, even in pull requests, you must aim to make your commits a clear and c
 
 
 <a name="commit-message" id="commit-message"></a>
-## Commit messages
+### Commit messages
 
 Just like choosing when to commit, and what to commit, it is also important to think about your naming. It is always good to be as descriptive as possible with your commit messages. 
 Also consider: 
@@ -392,7 +394,7 @@ I tend to favour one line commits for simplicity, but many schools of thought ou
 
 
 <a id="merging-commits" name="merging-commits"></a>
-## Merging Commits
+### Merging Commits
 
 Often you will find yourself wanting to merge commits, or organising your early commits slightly differently on a branch to better demonstrate what you worked on. I will briefly go through one easy way to do this.
 
