@@ -232,7 +232,7 @@ And then make a pull request  to master
 
 ![viewing all your branches on github](./img/view-github-branches.png)
 
-Now merge, and delete your branch. Now your remote branch master is completely up to date with your latest changes.
+Afterwards you will see a merge button. Press it and delete your branch. Now your remote branch master is completely up to date with your latest changes.
 
 Return to your terminal and navigate to your local master branch. Pull down. You will see your branch update (fast-forward). Delete the branch `update-cheatsheet`. 
 
@@ -343,8 +343,10 @@ git status
 ![git detached head warning](./img/detached-head.png)
 
 
-As you can see after you checkout a message appears informing your that you are in a 'detached HEAD' state, meaning your are not working on any current branch. Open up the file in the time folder and look at the time and message. It should be the 2nd one that you wrote. 
+As you can see after you checkout a message appears informing your that you are in a 'detached HEAD' state, meaning your are not working on any current branch. Open up the file in the time folder and look at the time and message. It should be the 2nd one that you wrote.
+
 Repeat step 6, and use the hash of the first time commit you made. Open the file and see that the time of your first commit, and your message to yourself. This is going back in time. You can easily go back as far as you like in the project and see older iterations of this tutorial!
+
 Next, we should go back to the future. The quickest and easiest way is to checkout onto the`timeline-practise` branch and you should be back up to date. However, you can also navigate back to the latest commit from where you are now. First, check `git log`. You will notice your latest commits are no longer on there. This is where another command is handy. `git reflog` is best used to find recently "lost" commits. you should see something like:
 
 ![git reflog example](./img/git-reflog.png)
