@@ -386,11 +386,11 @@ Also consider:
 * Focus on why you did something, not how you did it
 * Avoid `ands`. If you find yourself wanting to write `and`, you should probably break up that commit into multiple ones.
 
-Remember that the purpose of this commit is to be a message for future you, or your colleagues who may have not known what you are working on. Try to think about your message with this in mind.
+Remember that the purpose of this commit is to be a message for future you, or your colleagues who may not have known what you are working on. Try to think about your message with this in mind.
 
 Many development teams take it one step further and turn their commit messages into change logs. These change logs may be used for user consumption making it all the more important to have clear messages of what was done for that commit.
 
-I tend to favour one line commits for simplicity, but many schools of thought out there prefer multiline commit messages. For examples of how to do this see:
+I tend to favour one line commits for simplicity, but many schools of thought out there prefer multiline commit messages. For examples of "best practice" formats for this see:
 * [Commit message guidelines Angular](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format)
 * [Informative guidelines, and a cute cat filled slideshow](http://www.slideshare.net/TarinGamberini/commit-messages-goodpractices)
 
