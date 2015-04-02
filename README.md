@@ -378,12 +378,14 @@ Likewise, even in pull requests, you must aim to make your commits a clear and c
 ### Commit messages
 
 Just like choosing when to commit, and what to commit, it is also important to think about your naming. It is always good to be as descriptive as possible with your commit messages. 
+
 Also consider: 
-Present tense for your commit messages
-If related to an issue on github, should contain issue number
-The first line should be 50 characters or less. Your message should be brief and to the point.
-Focus on why you did something, not how you did it
-Avoid `ands` . If you find yourself wanting to write `and`, you should probably break up that commit into multiple ones.
+* Present tense for your commit messages
+* If related to an issue on github, should contain issue number
+* The first line should be 50 characters or less. Your message should be brief and to the point.
+* Focus on why you did something, not how you did it
+* Avoid `ands`. If you find yourself wanting to write `and`, you should probably break up that commit into multiple ones.
+
 Remember that the purpose of this commit is to be a message for future you, or your colleagues who may have not known what you are working on. Try to think about your message with this in mind.
 
 Many development teams take it one step further and turn their commit messages into change logs. These change logs may be used for user consumption making it all the more important to have clear messages of what was done for that commit.
