@@ -1,12 +1,12 @@
 # Introduction to Git and Version Control
 
-This tutorial is targeted towards the students of [Founders & Coders](http://foundersandcoders.org/) 8 week coding Academy. Feedback or Suggestions in the format of an issue or contributions as a pull request are appreciated.
+This tutorial is targeted towards the students of courses at [Founders & Coders](http://foundersandcoders.org/). Feedback or Suggestions in the format of an issue or contributions as a pull request are appreciated.
 
 As a student, if you get stuck at any point, please open an issue and I will try to get back to you as soon as possible. If you would prefer, feel free to contact me on Gitter. When the issue is solved, do think about making a pull request to the project.
 
-The introduction to Git is aimed at the first week of the course. The hope is that this introduction will cover all you need to know to start collaborating on code with your fellow teammates.
+The introduction to Git is aimed at the first week of the full time Founders & Coders course, or to those just starting out with git. The hope is that this introduction will cover all you need to know to start collaborating on code with your fellow teammates.
 
-Git for Collaboration is aimed at the second week students of the course. Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
+Git for Collaboration is aimed at the second week students of the course, or those that have mastered the first section. Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
 
 
 # Contents
@@ -36,7 +36,7 @@ Git for Collaboration is aimed at the second week students of the course. Even t
 <a id="introduction" name="introduction"></a>
 # Introduction
 
-This introduction to Git is aimed at first week students of [Founders & Coders](http://foundersandcoders.org/) 8 week coding academy. The hope is that this introduction will cover all you need to know to start collaborating on code with your fellow teammates. 
+The introduction to Git is aimed at the first week of the full time Founders & Coders course, or to those just starting out with git. The hope is that this introduction will cover all you need to know to start collaborating on code with your fellow teammates.
 
 
 <a id="terminology" name="terminology"></a>
@@ -287,7 +287,7 @@ http://scottchacon.com/2011/08/31/github-flow.html
 <a name="git-collaboration" id="git-collaboration"></a>
 # Git for Collaboration
 
-Git for Collaboration is aimed at the second week students of the course. Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
+Git for Collaboration is aimed at the second week students of the course, or those that have mastered the first section. Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
 
 
 <a name="further-terminology" id="further-terminology"></a>
