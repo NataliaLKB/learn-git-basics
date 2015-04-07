@@ -1,6 +1,6 @@
 # Introduction to Git and Version Control
 
-This tutorial is targeted towards the students of Founders & Coders 8 week coding Academy. Feedback or Suggestions in the format of an issue or contributions as a pull request are appreciated.
+This tutorial is targeted towards the students of [Founders & Coders](http://foundersandcoders.org/) 8 week coding Academy. Feedback or Suggestions in the format of an issue or contributions as a pull request are appreciated.
 
 As a student, if you get stuck at any point, please open an issue and I will try to get back to you as soon as possible. If you would prefer, feel free to contact me on Gitter. When the issue is solved, do think about making a pull request to the project.
 
@@ -27,7 +27,7 @@ Git for Collaboration is aimed at the second week students of the course. Even t
 3. [Committing](#commits)
     * [When should you commit](#when-commit)
     * [Commit messages](#commit-message)
-4. [More about branches and Flows](#final flows)
+    * [Merging commits](#merging-commits)
 
 #### [Resources](#resources)
 
@@ -100,7 +100,7 @@ On your local machine, please make sure you have git installed. If you are using
 
 <a name="getting-started" id="getting-started"></a>
 ### Getting Starting
-The next step is to clone the forked version of this repository. Copy the url shown here: 
+The next step is to clone the forked version of this repository. On the main page of the repo, copy the url shown here: 
 
 ![where to copy url on github](./img/git-clone.png)
 
@@ -109,6 +109,8 @@ Then use the command in your terminal:
 ```
 git clone https://github.com/NataliaLKB/learn-git-basics.git
 ```
+
+You should now be ablle to redirect into the directory just created using the command line.
 
 Next, it is good to get in the habit after each command to use `git status`. Let us use it now. 
 
@@ -161,7 +163,7 @@ As you can see, your branch is now gone.
 
 <a name="changes" id="changes"></a>
 ### Making Changes
-Now it is time to make some changes in the project. Make yourself a new branch named `update-cheatsheet` and go onto it. open up the file cheatsheet.md in your favourite test editor.
+Now it is time to make some changes in the project. Make yourself a new branch named `update-cheatsheet` and go onto it. open up the file cheatsheet.md in your favourite text editor.
 
 As you can see, this contains all the commands you will need to begin using git. Continue to add to it all the new commands you learn. To begin, here is a command that both creates a branch, and moves you onto it at the same time:
 
@@ -322,7 +324,7 @@ git log
 
 You should see something like this:
 
-![git merge conflict example](./img/merge-conflict.png)
+![git log example](./img/git-log.png)
 
 
 Pick the second time commit that you made and copy the hash. Use `q` to exit the log and checkout to your commit.
@@ -342,7 +344,8 @@ Next, we should go back to the future. The quickest and easiest way is to checko
 ![git reflog example](./img/git-reflog.png)
 
 Find the commit name of the last commit you did (the third time that you recorded) and copy the short hash in yellow. Checkout back to that commit, and `git diff timeline-practise` there should be no difference. 
-Checkout back to `timeline-practise` and push up to Github to make a PR to master. Make sure you first check that it is up to date with master locally.
+Checkout back to `timeline-practise` and push up to Github to make a PR to master. Make sure you first check that 
+it is up to date with master locally.
 
 
 <a name="commits" id="commits"></a>
@@ -384,8 +387,39 @@ I tend to favour one line commits for simplicity, but many schools of thought ou
 * [Informative guidelines, and a cute cat filled slideshow](http://www.slideshare.net/TarinGamberini/commit-messages-goodpractices)
 
 
-<a name="Resources" id="Resources"></a>
+<a id="merging-commits" name="merging-commits"></a>
+## Merging Commits
+
+Often you will find yourself wanting to merge commits, or organising your early commits slightly differently on a branch to better demonstrate what you worked on. I will briefly go through one easy way to do this.
+
+#### Reset Soft
+This is my preferred method of merging commits together. It leaves you with lots of flexibility.
+
+To begin, make a new branch and make some new files and commit regularly (at least twice). 
+
+Next `git log` and pick the 3rd most recent hash. Copy it and:
+
+```
+git reset --soft <commit hash>
+git status
+git log
+```
+
+Your working directory shouldn't changes, but all the files that you changed should be in green. Your log should have the newest commit as the hash you copied. Even though all your work is still the same as before the reset, the commits are different. Then you can commit again and this is an easy way to replace 2 or more commits with one commit.
+
+
+For more information and techiques see:
+
+* [What to learn more about reset?](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting/commit-level-operations)
+* [Only want to ammend the previous commit?](https://www.atlassian.com/git/tutorials/rewriting-history/)
+* [The Golden Rule of Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/the-golden-rule-of-rebasing)
+
+
+
+<a name="resources" id="resources"></a>
 # RESOURCES:
 
-* http://gitreal.codeschool.com/
+* For generating ssh keys https://help.github.com/articles/generating-ssh-keys/
+* http://gitreal.codeschool.com/ 
 * https://www.atlassian.com/git/tutorials/
+* https://github.com/pcottle/learnGitBranching 
