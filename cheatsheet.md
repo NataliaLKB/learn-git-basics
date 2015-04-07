@@ -17,4 +17,8 @@
 
 ##### Deleting a branch
 		git branch -d <branch name>
+
+##### Creating and moving onto a branch
+		git checkout -b <branch name>
+
  
