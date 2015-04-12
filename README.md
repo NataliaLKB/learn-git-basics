@@ -21,7 +21,7 @@ Git for Collaboration is aimed at the second week students of the course, or tho
 	* [Merge Conflicts](#conflicts)
 4. [Introducing Github Flow](#github-flow)
 
-#### [Git for Collaboration](#git-collaboration)
+#### [Git for Collaboration](#git-for-collaboration)
 1. [Further terminology](#further-terminology)
 2. [The Timeline](#timeline)
 3. [Committing](#commits)
@@ -73,7 +73,7 @@ Git can provide you with a complete history of every commit made on a project. B
 
 * Being able to see what differences exist between commits
 
-* Being able to move between difference commits (or places in time). This is especially useful if something became broken while you were working on it, and you need to start again.
+* Being able to move between different commits (or places in time). This is especially useful if something became broken while you were working on it, and you need to start again.
 
 In the introduction section of this tutorial, we won't be able to cover all these benefits in practise extensively. However, we will aim to give you all the information you will need to know by the end.
 
@@ -99,7 +99,7 @@ On your local machine, please make sure you have git installed. If you are using
 
 
 <a name="getting-started" id="getting-started"></a>
-### Getting Starting
+### Getting Started
 The next step is to clone the forked version of this repository. On the main page of the repo, copy the url shown here: 
 
 ![where to copy url on github](./img/git-clone.png)
@@ -284,7 +284,7 @@ http://scottchacon.com/2011/08/31/github-flow.html
 
 
 
-<a name="git-collaboration" id="git-collaboration"></a>
+<a name="git-for-collaboration" id="git-for-collaboration"></a>
 # Git for Collaboration
 
 Git for Collaboration is aimed at the second week students of the course, or those that have mastered the first section. Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
