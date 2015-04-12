@@ -367,13 +367,13 @@ You should aim each commit to be a "safe" version of the project. This means tha
 
 Given that, when you commit is very important. I have heard two very useful guidelines. 
 
-The first, is that a you complete the task assigned to you, you make several commits at different times during that task. In the end you merge all those commits together to make one very informative commit of that task. I will talk about ways to merge commits together in a later section.
+The first, is that you complete the task assigned to you, you make several commits at different times during that task. In the end you merge all those commits together to make one very informative commit of that task. I will talk about ways to merge commits together in a later section.
 
 The second method is you work through your task and complete it before adding or committing at all. Then you check the status of the repo and see all the files you have changed. The next step is selectively adding and committing 
 
-Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extend of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named. 
+Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extent of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named. 
 
-Likewise, even in pull requests, you must aim to make your commits a clear and concise summary of what tasks where completed on that branch. That way the person reviewing your pull request understands what they will be reviewing before looking at the code itself.
+Likewise, even in pull requests, you must aim to make your commits a clear and concise summary of what tasks were completed on that branch. That way the person reviewing your pull request understands what they will be reviewing before looking at the code itself.
 
 
 <a name="commit-message" id="commit-message"></a>
