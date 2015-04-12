@@ -21,7 +21,7 @@ Git for Collaboration is aimed at the second week students of the course, or tho
 	* [Merge Conflicts](#conflicts)
 4. [Introducing Github Flow](#github-flow)
 
-#### [Git for Collaboration](#git-for-collaboration)
+#### [Git for Collaboration](#git-collaboration)
 1. [Further terminology](#further-terminology)
 2. [The Timeline](#timeline)
 3. [Committing](#commits)
@@ -73,7 +73,7 @@ Git can provide you with a complete history of every commit made on a project. B
 
 * Being able to see what differences exist between commits
 
-* Being able to move between different commits (or places in time). This is especially useful if something became broken while you were working on it, and you need to start again.
+* Being able to move between difference commits (or places in time). This is especially useful if something became broken while you were working on it, and you need to start again.
 
 In the introduction section of this tutorial, we won't be able to cover all these benefits in practise extensively. However, we will aim to give you all the information you will need to know by the end.
 
@@ -99,7 +99,7 @@ On your local machine, please make sure you have git installed. If you are using
 
 
 <a name="getting-started" id="getting-started"></a>
-### Getting Started
+### Getting Starting
 The next step is to clone the forked version of this repository. On the main page of the repo, copy the url shown here: 
 
 ![where to copy url on github](./img/git-clone.png)
@@ -284,7 +284,7 @@ http://scottchacon.com/2011/08/31/github-flow.html
 
 
 
-<a name="git-for-collaboration" id="git-for-collaboration"></a>
+<a name="git-collaboration" id="git-collaboration"></a>
 # Git for Collaboration
 
 Git for Collaboration is aimed at the second week students of the course, or those that have mastered the first section. Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
@@ -367,13 +367,13 @@ You should aim each commit to be a "safe" version of the project. This means tha
 
 Given that, when you commit is very important. I have heard two very useful guidelines. 
 
-The first, is that you complete the task assigned to you, you make several commits at different times during that task. In the end you merge all those commits together to make one very informative commit of that task. I will talk about ways to merge commits together in a later section.
+The first, is that a you complete the task assigned to you, you make several commits at different times during that task. In the end you merge all those commits together to make one very informative commit of that task. I will talk about ways to merge commits together in a later section.
 
 The second method is you work through your task and complete it before adding or committing at all. Then you check the status of the repo and see all the files you have changed. The next step is selectively adding and committing 
 
-Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extent of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named. 
+Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extend of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named. 
 
-Likewise, even in pull requests, you must aim to make your commits a clear and concise summary of what tasks were completed on that branch. That way the person reviewing your pull request understands what they will be reviewing before looking at the code itself.
+Likewise, even in pull requests, you must aim to make your commits a clear and concise summary of what tasks where completed on that branch. That way the person reviewing your pull request understands what they will be reviewing before looking at the code itself.
 
 
 <a name="commit-message" id="commit-message"></a>
