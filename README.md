@@ -73,7 +73,7 @@ Git can provide you with a complete history of every commit made on a project. B
 
 * Being able to see what differences exist between commits
 
-* Being able to move between difference commits (or places in time). This is especially useful if something became broken while you were working on it, and you need to start again.
+* Being able to move between different commits (or places in time). This is especially useful if something became broken while you were working on it, and you need to start again.
 
 In the introduction section of this tutorial, we won't be able to cover all these benefits in practise extensively. However, we will aim to give you all the information you will need to know by the end.
 
@@ -99,7 +99,7 @@ On your local machine, please make sure you have git installed. If you are using
 
 
 <a name="getting-started" id="getting-started"></a>
-### Getting Starting
+### Getting Started
 The next step is to clone the forked version of this repository. On the main page of the repo, copy the url shown here: 
 
 ![where to copy url on github](./img/git-clone.png)
