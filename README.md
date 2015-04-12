@@ -95,7 +95,11 @@ Next please fork this repository.
 
 ![fork button on github](./img/fork.png)
 
-On your local machine, please make sure you have git installed. If you are using a mac, please install with brew. Windows use http://git-scm.com/download/win. and Linux install using these instructions http://git-scm.com/download/linux.
+On your local machine, please make sure you have git installed.
+
+If you are using a mac, the easiest thing is to install git with [Homebrew](http://brew.sh/). Want to learn more about Homebrew? Check out this [tutorial](http://computers.tutsplus.com/tutorials/homebrew-demystified-os-xs-ultimate-package-manager--mac-44884).
+
+Windows use http://git-scm.com/download/win. and Linux install using these instructions http://git-scm.com/download/linux.
 
 
 <a name="getting-started" id="getting-started"></a>
