@@ -55,10 +55,10 @@ A version control system.
 A remote location where you can store you code, and which all the members of the team have access to. Think of it like a dropbox for code. One of the big differences however is most repositories on github are public. Anybody can see your code.
 
 ##### *Commit*
-A way of saving your code at different points along the project. Unlike many tools you may have used however, all commits are saved. This creates a project history and a way to track changes. 
+A way of saving your code at different points along the project. Unlike many tools you may have used however, all commits are saved. This creates a project history and a way to track changes.
 
 ##### *Branches*
-As you work on a git repo the first branch you are on is usually the default branch. This is often called `master`. If you start working on a section of the website (say the footer styling), it is best practise to create your own branch for that feature. Creating your own branch is like taking a copy of `master` and renaming it. When you commit, they will now be on that new branch only. 
+As you work on a git repo the first branch you are on is usually the default branch. This is often called `master`. If you start working on a section of the website (say the footer styling), it is best practise to create your own branch for that feature. Creating your own branch is like taking a copy of `master` and renaming it. When you commit, they will now be on that new branch only.
 
 In the sections below we will walk through how to do this. For the meantime, just note that you always have one default branch, and can have as many other branches as needed.
 
@@ -78,7 +78,7 @@ Git can provide you with a complete history of every commit made on a project. B
 In the introduction section of this tutorial, we won't be able to cover all these benefits in practise extensively. However, we will aim to give you all the information you will need to know by the end.
 
 ##### Multiple people working on the same files
-Version control makes this possible. If you work on one file, and then I work on the same file at the same time when we want to combine our changes git allows us to keep both versions save that we can compare. This allows us to integrate our changes more swiftly. 
+Version control makes this possible. If you work on one file, and then I work on the same file at the same time when we want to combine our changes git allows us to keep both versions save that we can compare. This allows us to integrate our changes more swiftly.
 
 We will practice with this later.
 
@@ -104,7 +104,7 @@ Windows use http://git-scm.com/download/win. and Linux install using these instr
 
 <a name="getting-started" id="getting-started"></a>
 ### Getting Started
-The next step is to clone the forked version of this repository. On the main page of the repo, copy the url shown here: 
+The next step is to clone the forked version of this repository. On the main page of the repo, copy the url shown here:
 
 ![where to copy url on github](./img/git-clone.png)
 
@@ -116,7 +116,7 @@ git clone https://github.com/NataliaLKB/learn-git-basics.git
 
 You should now be ablle to redirect into the directory just created using the command line.
 
-Next, it is good to get in the habit after each command to use `git status`. Let us use it now. 
+Next, it is good to get in the habit after each command to use `git status`. Let us use it now.
 
 ```
 git status
@@ -157,12 +157,12 @@ git branch
 Now you can see you are on that branch. Go back to master and now we are going to delete `new-branch`.
 
 ```
-git checkout master    
+git checkout master
 git branch -d new-branch
 git branch
 ```
 
-As you can see, your branch is now gone. 
+As you can see, your branch is now gone.
 
 
 <a name="changes" id="changes"></a>
@@ -193,7 +193,7 @@ git status
 ```
 
 Now you can see the file name has turned green. Now to commit your changes.
-    
+
 ```
 git commit -m 'adding new command in the cheatsheet'
 git status
@@ -218,7 +218,7 @@ git merge master
 ```
 
 Even though in this situation there isn't any changes to merge, it is best to get in the habit on going through these steps in your work flow. Merging like this means taking any possible changes in master and merging them with the branch you are currently on.
-After you merge with master you have to push your changes to the remote repo (Github). 
+After you merge with master you have to push your changes to the remote repo (Github).
 
 ```
 git push origin update-cheatsheet
@@ -238,7 +238,7 @@ And then make a pull request  to master
 
 Afterwards you will see a merge button. Press it and delete your branch. Now your remote branch master is completely up to date with your latest changes.
 
-Return to your terminal and navigate to your local master branch. Pull down. You will see your branch update (fast-forward). Delete the branch `update-cheatsheet`. 
+Return to your terminal and navigate to your local master branch. Pull down. You will see your branch update (fast-forward). Delete the branch `update-cheatsheet`.
 
 
 <a name="conflicts" id="conflicts"></a>
@@ -271,9 +271,9 @@ Merge with master. You should have a git conflict that looks something like this
 
 ![git merge conflict example](./img/merge-conflict.png)
 
-Do you see the lines at the top. The first section is labelled `HEAD` those are from this branch. The next section is from master. Delete the lines, and any other code you want until the cheatsheet looks like how you want it to look. 
+Do you see the lines at the top. The first section is labelled `HEAD` those are from this branch. The next section is from master. Delete the lines, and any other code you want until the cheatsheet looks like how you want it to look.
 
-Afterwards git status, add the files in red, commit, and push. Then make a pull request to master like before and merge. Don't forget to update your local master branch, and delete the merged branch in Github and in your local repo. It is good to keep your working environments clean and organised. 
+Afterwards git status, add the files in red, commit, and push. Then make a pull request to master like before and merge. Don't forget to update your local master branch, and delete the merged branch in Github and in your local repo. It is good to keep your working environments clean and organised.
 
 
 <a name="github-flow" id="github-flow"></a>
@@ -311,7 +311,7 @@ As discussed previously git stores all the commits on the project. You can use t
 
 Before we start make sure you have a terminal open located at the local copy of this repo. The same one that was used for the first tutorial is essential. Make a new branch called `timeline-practice` and navigate onto it.
 
-Make a new directory in the project via the command line. Lets call it `time`. 
+Make a new directory in the project via the command line. Lets call it `time`.
 
 ```
 mkdir time
@@ -355,8 +355,8 @@ Next, we should go back to the future. The quickest and easiest way is to checko
 
 ![git reflog example](./img/git-reflog.png)
 
-Find the commit name of the last commit you did (the third time that you recorded) and copy the short hash in yellow. Checkout back to that commit, and `git diff timeline-practise` there should be no difference. 
-Checkout back to `timeline-practise` and push up to Github to make a pull request to master. Make sure you first check that 
+Find the commit name of the last commit you did (the third time that you recorded) and copy the short hash in yellow. Checkout back to that commit, and `git diff timeline-practise` there should be no difference.
+Checkout back to `timeline-practise` and push up to Github to make a pull request to master. Make sure you first check that
 it is up to date with master locally.
 
 
@@ -369,13 +369,13 @@ it is up to date with master locally.
 
 You should aim each commit to be a "safe" version of the project. This means that if you checkout to any commit in your timeline, that should reflect where the project was at that point, and be functional.
 
-Given that, when you commit is very important. I have heard two very useful guidelines. 
+Given that, when you commit is very important. I have heard two very useful guidelines.
 
 The first, is that a you complete the task assigned to you, you make several commits at different times during that task. In the end you merge all those commits together to make one very informative commit of that task. I will talk about ways to merge commits together in a later section.
 
-The second method is you work through your task and complete it before adding or committing at all. Then you check the status of the repo and see all the files you have changed. The next step is selectively adding and committing 
+The second method is you work through your task and complete it before adding or committing at all. Then you check the status of the repo and see all the files you have changed. The next step is selectively adding and committing
 
-Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extend of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named. 
+Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extend of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named.
 
 Likewise, even in pull requests, you must aim to make your commits a clear and concise summary of what tasks where completed on that branch. That way the person reviewing your pull request understands what they will be reviewing before looking at the code itself.
 
@@ -383,9 +383,9 @@ Likewise, even in pull requests, you must aim to make your commits a clear and c
 <a name="commit-message" id="commit-message"></a>
 ### Commit messages
 
-Just like choosing when to commit, and what to commit, it is also important to think about your naming. It is always good to be as descriptive as possible with your commit messages. 
+Just like choosing when to commit, and what to commit, it is also important to think about your naming. It is always good to be as descriptive as possible with your commit messages.
 
-Also consider: 
+Also consider:
 * Present tense for your commit messages
 * If related to an issue on github, should contain issue number
 * The first line should be 50 characters or less. Your message should be brief and to the point.
@@ -409,7 +409,7 @@ Often you will find yourself wanting to merge commits, or organising your early 
 #### Reset Soft
 This is my preferred method of merging commits together. It leaves you with lots of flexibility.
 
-To begin, make a new branch and make some new files and commit regularly (at least twice). 
+To begin, make a new branch and make some new files and commit regularly (at least twice).
 
 Next `git log` and pick the 3rd most recent hash. Copy it and:
 
@@ -431,9 +431,20 @@ For more information and techiques see:
 
 
 <a name="resources" id="resources"></a>
-# RESOURCES:
+# RESOURCES [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/NataliaLKB/learn-git-basics/issues)
+
+> Have you ***found a useful Git or GitHub resource or tutorial? Please let us know*** by creating an issue
 
 * For generating ssh keys https://help.github.com/articles/generating-ssh-keys/
-* http://gitreal.codeschool.com/ 
-* https://www.atlassian.com/git/tutorials/
-* https://github.com/pcottle/learnGitBranching 
+* CodeSchool "Git Real" tutorial: http://gitreal.codeschool.com/
+* Atlassian (makers of *SourceTree*) Git Tutorials: https://www.atlassian.com/git/tutorials/
+* Git Branching: https://github.com/pcottle/learnGitBranching
++ Interactive tutorial: http://gitimmersion.com
++ Build Podcast (intro to Git) Video: http://build-podcast.com/git/
++ Git User Manual: https://www.kernel.org/pub/software/scm/git/docs/user-manual.html
++ GitHub's Treasure Trove of Video Tutorials: https://www.youtube.com/user/GitHubGuides (channel) and *specifically*: https://www.youtube.com/watch?v=FyfwLX4HAxM
++ The *simple* guide to git: http://rogerdudler.github.io/git-guide/
++ Jeff Schomay's Git-Fu presentation: http://slides.com/jschomay/git-fu
++ Git Pretty: http://justinhileman.info/article/git-pretty/ (anything visual makes learning git much easier...)
++ Intermediate: http://www.raywenderlich.com/74258/git-tutorial-intermediate
++ Visualize your Git with **SourceTree**: http://www.sourcetreeapp.com/
