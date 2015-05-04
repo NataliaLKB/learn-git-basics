@@ -8,9 +8,12 @@
 
 ##### Pulling down all branches in a remote repo, not just the default branch
         git fetch --all
-
+        
 ##### Creating a new branch for you to work on
         git branch <new branch name>
+
+##### See all branches in your remote repository
+		git branch -a
 
 ##### Moving onto a branch
         git checkout <branch name>
