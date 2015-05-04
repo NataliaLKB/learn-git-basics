@@ -18,3 +18,6 @@
 ##### Deleting a branch
 		git branch -d <branch name>
  
+##### Crate a branch and move to it
+ 		git checkout -b <new branch name>
+
