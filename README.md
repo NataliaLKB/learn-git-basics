@@ -138,7 +138,7 @@ When there are other branches in your repo the green branch is the current one y
 The next step is to create your own branch to work on. try this:
 
 ```
-git branch my-new-branch
+git branch new-branch
 ```
 
 It is best to try to name your branches as specific as possible, so not to confuse them with any others. There are many naming conventions out there for branches, but for this week simply try to name them off of a feature. For example (`navbar-collapse` or `sass-file-structure`). To see all your branches:
