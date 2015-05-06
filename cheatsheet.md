@@ -35,3 +35,6 @@
 
 ##### Pulling remote changes into your local repo
         git pull origin <branch name>
+
+##### To see differences between current branch and master
+		git diff master
