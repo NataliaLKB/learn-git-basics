@@ -12,6 +12,9 @@
 ##### Creating a new branch for you to work on
         git branch <new branch name>
 
+##### See all branches in your remote repository
+		git branch -a
+
 ##### Moving onto a branch
         git checkout <branch name>
 
@@ -38,3 +41,7 @@
 
 ##### To see differences between current branch and master
 		git diff master
+
+##### Creating a new branch and switching to it
+		git checkout -b <new branch name>
+ 
