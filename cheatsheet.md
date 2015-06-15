@@ -1,7 +1,7 @@
 # Git Command Cheat Sheet
 
 ##### Cloning your remote directory
-  git clone <remote directory>
+    git clone <remote directory>
 
 ##### Checking that status of your local repository
   git status
