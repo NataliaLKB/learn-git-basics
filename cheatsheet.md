@@ -8,6 +8,9 @@
 
 ##### Creating a new branch for you to work on
 		git branch <new branch name>
+		
+##### Create a new branch and move directly onto it
+    git checkout -b <new branch name>
 
 ##### See all branches in your remote repository
 		git branch -a
