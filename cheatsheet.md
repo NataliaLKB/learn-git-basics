@@ -38,3 +38,6 @@
 
 ##### Pulling remote changes into your local repo
     git pull origin <branch name>
+
+##### Prints out project history regardless of where one is in the timeline
+    git reflog
