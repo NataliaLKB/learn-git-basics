@@ -1,6 +1,7 @@
 # BASH Cheatsheet
 - As applied in [Secure Shell ChromeOS app](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=en)
 
+
 ## Cursor
 
 `enter` Run command
@@ -27,6 +28,7 @@
 
 `ctrl+l` Clear the terminal
 
+
 ## Info
 
 `pwd` Print Working Directory
@@ -42,20 +44,27 @@
 `du -h` Disk Usage list of folders in Human readable output
 
 `du -ah` Disk Usage list of All files & folders in Human readable output
+
+
 ## Navigation
 
-`cd ~` Change to the root Directory
+`cd ~` Navigates (ie: Change) to the root directory
 
-`cd ..` Change (move) to the Directory up one level
+`cd path/to/directory` Navigate to directory
+  *hint: start typing then hit 'tab' to auto-complete*
+
+`cd ..` Navigate to the directory up one level
+
 
 ## File Manipulation
 
 `mkdir <folder-name>` Make a new Directory at current location
 
-`mv foo.txt bar/` Move file (foo.txt) into folder (bar)
+`mv foo.txt bar/` Move file `foo.txt` into folder `bar`
 
-`mv beans toast` Move folder (beans) into folder (toast)
+`mv beans toast` Move folder `beans` into folder `toast`
 
-`mv foo.txt foot.md` Rename file (name and/or extension)
+`mv foo.txt foo.md` Rename file `foo.txt` to `foo.md`
+  *Can rename filename or extension or both*
 
-`mv beans/ ..` Move a folder (beans) up one level
+`mv beans/ ..` Move a folder `beans` up one level
