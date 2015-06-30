@@ -1,0 +1,5 @@
+# ref: http://sivareddy.in/automatic-backup-project-data-git  > step 6
+git add .
+curtime=`date`
+git commit -m "Automatic Backup @ $curtime"
+git push origin master

@@ -18,7 +18,10 @@
 ##### Moving onto a branch
     git checkout <branch name>
 
-##### Deleting a branch
+##### Creating a branch and moving onto it
+    git checkout -b <branch name>
+
+##### Deleting a local branch
     git branch -d <branch name>
 
 ##### Moving your changes to the staging area
@@ -28,7 +31,7 @@
     git commit -m '<commit message here>'
 
 ##### Pushing your commit to the remote repository
-    git push origin <branch name>
+    git push -u origin <branch name>
 
 ##### Creating a branch and moving onto it.
     git checkout -b <new branch name>
