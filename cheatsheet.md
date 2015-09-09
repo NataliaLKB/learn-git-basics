@@ -20,6 +20,19 @@
 
 ##### Deleting a branch
 		git branch -d <branch name>
- 
-#### Creates a branch, and moves you onto it 
+
+#### Creates a branch, and moves you onto it
  		git checkout -b <new branch name>
+
+#### commit changes
+git commit -m 'comment'
+
+#### pull original file to have latest version of file from github so that you and your team are working with the latest changes
+git checkout master
+git pull origin master
+
+#### Merge with master
+git merge master
+
+#### Push changes to remote repo on github
+git push origin update-cheatsheet
