@@ -36,3 +36,6 @@ git merge master
 
 #### Push changes to remote repo on github
 git push origin update-cheatsheet
+
+#### Creates a branch, and moves you onto it at the same time
+ 		git checkout -b <new branch name>
