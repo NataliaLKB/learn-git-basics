@@ -28,6 +28,7 @@
 git commit -m 'comment'
 
 #### pull original file to have latest version of file from github so that you and your team are working with the latest changes
+
 git checkout master
 git pull origin master
 
@@ -42,4 +43,5 @@ git push origin update-cheatsheet
 
 #### sohil adding
  	git checkout -b <new branch name>
-	
+#### Initialize a new Git repository in a project folder to start using Git ####Tormod###
+	 $ cd project/current_project     git init	
