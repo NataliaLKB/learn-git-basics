@@ -43,5 +43,6 @@ git push origin update-cheatsheet
 
 #### sohil adding
  	git checkout -b <new branch name>
+ 	
 #### Initialize a new Git repository in a project folder to start using Git ####Tormod###
 	 $ cd project/current_project     git init	
