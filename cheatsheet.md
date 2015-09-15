@@ -17,4 +17,7 @@
 
 ##### Deleting a branch
 		git branch -d <branch name>
+
+##### Moving files while preserving git history
+		git mv <source> <destination>
  
