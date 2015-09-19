@@ -14,6 +14,8 @@
 ##### Create and move to new branch
 		git checkout -b <new branch name>
 
+git commit -m 'adding new command in the cheatsheet'
+
 ##### See all branches in your remote repository
 		git branch -a
 
@@ -46,4 +48,7 @@ git push origin update-cheatsheet
 #### sohil adding
  	git checkout -b <new branch name>
 #### Initialize a new Git repository in a project folder to start using Git ####Tormod###
-	 $ cd project/current_project     git init	
+	 $ cd project/current_project     git init
+
+#### display where pushes will be made 	  
+git remote show origin
