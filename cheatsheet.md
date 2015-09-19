@@ -1,16 +1,25 @@
 # Git Command Cheat Sheet
 
+##### git checkout -b <new branch name>
+
 ##### Cloning your remote directory
         git clone <remote directory>
 
 ##### Checking that status of your local repository
         git status
-
 ##### Pulling down all branches in a remote repo, not just the default branch
         git fetch --all
 
 ##### Creating a new branch for you to work on
         git branch <new branch name>
+
+##### Create and move to new branch
+		git checkout -b <new branch name>
+
+git commit -m 'adding new command in the cheatsheet'
+
+##### See all branches in your remote repository
+		git branch -a
 
 ##### Moving onto a branch
         git checkout <branch name>
@@ -18,20 +27,31 @@
 ##### Deleting a branch
 		git branch -d <branch name>
 
-##### Moving your changes to the staging area
-        git add <file name>
+#### Creates a branch, and moves you onto it
+ 		git checkout -b <new branch name>
 
-##### Committing your changes
-        git commit -m '<commit message here>'
+#### commit changes
+git commit -m 'comment'
 
-##### Pushing your commit to the remote repository
-        git push origin <branch name>
+#### pull original file to have latest version of file from github so that you and your team are working with the latest changes
 
-##### Creating a branch and moving onto it.
-        git checkout -b <new branch name>
+git checkout master
+git pull origin master
 
-##### Merging changes from another branch, to your current branch
-        git merge <branch you want to merge with your current branch>
+#### Merge with master
+git merge master
 
-##### Pulling remote changes into your local repo
-        git pull origin <branch name>
+#### Push changes to remote repo on github
+git push origin update-cheatsheet
+
+
+#### Creates a branch, and moves you onto it at the same time
+ 		git checkout -b <new branch name>
+
+#### sohil adding
+ 	git checkout -b <new branch name>
+#### Initialize a new Git repository in a project folder to start using Git ####Tormod###
+	 $ cd project/current_project     git init
+
+#### display where pushes will be made 	  
+git remote show origin
