@@ -1,5 +1,7 @@
 # Git Command Cheat Sheet
 
+##### git checkout -b <new branch name>
+
 ##### Cloning your remote directory
         git clone <remote directory>
 
@@ -14,6 +16,8 @@
 ##### Create and move to new branch
 		git checkout -b <new branch name>
 
+git commit -m 'adding new command in the cheatsheet'
+
 ##### See all branches in your remote repository
 		git branch -a
 
@@ -22,27 +26,6 @@
 
 ##### Deleting a branch
 		git branch -d <branch name>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-##### Moving your changes to the staging area
-        git add <file name>
-
-##### Committing your changes
-        git commit -m '<commit message here>'
-
-##### Pushing your commit to the remote repository
-        git push origin <branch name>
-
-##### Creating a branch and moving onto it.
-        git checkout -b <new branch name>
-
-##### Merging changes from another branch, to your current branch
-        git merge <branch you want to merge with your current branch>
-
-##### Pulling remote changes into your local repo
-        git pull origin <branch name>
-=======
 
 #### Creates a branch, and moves you onto it
  		git checkout -b <new branch name>
@@ -51,6 +34,7 @@
 git commit -m 'comment'
 
 #### pull original file to have latest version of file from github so that you and your team are working with the latest changes
+
 git checkout master
 git pull origin master
 
@@ -59,4 +43,15 @@ git merge master
 
 #### Push changes to remote repo on github
 git push origin update-cheatsheet
->>>>>>> master
+
+
+#### Creates a branch, and moves you onto it at the same time
+ 		git checkout -b <new branch name>
+
+#### sohil adding
+ 	git checkout -b <new branch name>
+#### Initialize a new Git repository in a project folder to start using Git ####Tormod###
+	 $ cd project/current_project     git init
+
+#### display where pushes will be made 	  
+git remote show origin
