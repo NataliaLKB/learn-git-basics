@@ -345,13 +345,13 @@ As discussed previously git stores all the commits on the project. You can use t
 
 Before we start make sure you have a terminal open located at the local copy of this repo. The same one that was used for the first tutorial is essential. Make a new branch called `timeline-practice` and navigate onto it.
 
-Make a new directory in the project via the command line. Lets call it `time`.
+Step 1) Make a new directory in the project via the command line. Lets call it `time`.
 
 ```
 mkdir time
 ```
 
-Also make a new file in that directory and call it whatever you like. A simple text file should be fine. After you are done, open it.
+Step 2) Also make a new file in that directory and call it whatever you like. A simple text file should be fine. After you are done, open it.
 
 ```
 touch time/newfile.txt
@@ -360,7 +360,7 @@ open time/newfile.txt
 
 Write the current time stamp, and a short message to your future self. Save it. Next add and commit your changes. Your commit message should be descriptive of what you just did.
 Repeat step 2 twice more, deleting the previous time and message, and adding the new time and a different message. Make sure you add and commit each time. Make sure your commit messages are unique, and you can tell which one was first, second, and third.
-Next type in this command:
+Step 3) Next type in this command:
 
 ```
 git log
@@ -372,7 +372,7 @@ You should see something like this:
 
 
 Pick the second time commit that you made and copy the hash. Use `q` to exit the log and checkout to your commit.
-
+Step 4) 
 ```
 git checkout <commit hash>
 git status
@@ -383,7 +383,7 @@ git status
 
 As you can see after you checkout a message appears informing your that you are in a 'detached HEAD' state, meaning your are not working on any current branch. Open up the file in the time folder and look at the time and message. It should be the 2nd one that you wrote.
 
-Repeat step 6, and use the hash of the first time commit you made. Open the file and see that the time of your first commit, and your message to yourself. This is going back in time. You can easily go back as far as you like in the project and see older iterations of this tutorial!
+Repeat step 4, and use the hash of the first time commit you made. Open the file and see that the time of your first commit, and your message to yourself. This is going back in time. You can easily go back as far as you like in the project and see older iterations of this tutorial!
 
 Next, we should go back to the future. The quickest and easiest way is to checkout onto the`timeline-practise` branch and you should be back up to date. However, you can also navigate back to the latest commit from where you are now. First, check `git log`. You will notice your latest commits are no longer on there. This is where another command is handy. `git reflog` is best used to find recently "lost" commits. you should see something like:
 
@@ -405,11 +405,11 @@ You should aim each commit to be a "safe" version of the project. This means tha
 
 Given that, when you commit is very important. I have heard two very useful guidelines.
 
-The first, is that a you complete the task assigned to you, you make several commits at different times during that task. In the end you merge all those commits together to make one very informative commit of that task. I will talk about ways to merge commits together in a later section.
+The first, is that as you complete the task assigned to you, you make several commits at different times during that task. In the end you merge all those commits together to make one very informative commit of that task. I will talk about ways to merge commits together in a later section.
 
 The second method is you work through your task and complete it before adding or committing at all. Then you check the status of the repo and see all the files you have changed. The next step is selectively adding and committing
 
-Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extend of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named.
+Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extent of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named.
 
 Likewise, even in pull requests, you must aim to make your commits a clear and concise summary of what tasks where completed on that branch. That way the person reviewing your pull request understands what they will be reviewing before looking at the code itself.
 
