@@ -6,11 +6,17 @@
 ##### Checking that status of your local repository
         git status
 
+<<<<<<< HEAD
 ##### Pulling down all branches in a remote repo, not just the default branch
         git fetch --all
 
+=======
+>>>>>>> master
 ##### Creating a new branch for you to work on
         git branch <new branch name>
+
+##### See all branches in your remote repository
+		git branch -a
 
 ##### Moving onto a branch
         git checkout <branch name>
@@ -18,6 +24,7 @@
 ##### Deleting a branch
 		git branch -d <branch name>
 
+<<<<<<< HEAD
 ##### Moving your changes to the staging area
         git add <file name>
 
@@ -35,3 +42,10 @@
 
 ##### Pulling remote changes into your local repo
         git pull origin <branch name>
+=======
+##### Moving files while preserving git history
+		git mv <source> <destination>
+ 
+##### Creates branch and moves onto it
+      	       git checkout -b <new branch name>
+>>>>>>> master
