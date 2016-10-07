@@ -3,7 +3,7 @@
 ##### Cloning your remote directory
 		git clone <remote directory>
 
-##### Checking that status of your local repository
+##### Checking that status of your local repository - shows changed but not added files in red
 		git status
 
 ##### Creating a new branch for you to work on
@@ -21,3 +21,7 @@
 ##### Moving files while preserving git history
 		git mv <source> <destination>
  
+ 
+##### making a new branch whilst moving into it AT THE SAME TIME
+		git checkout -b <new branch name>
+
