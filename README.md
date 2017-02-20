@@ -10,30 +10,30 @@ This workshop is designed for collaborative learning, so grab a partner and use 
 # Contents
 1. [Introducing Github Flow](#github-flow)
 2. [Tutorial](#tutorial)
-* [Getting Started](#getting-started)
-* [Branching](#branching)
-* [Making Changes](#changes)
-* [Merging with Master](#merging)
-* [Merge Conflicts](#conflicts)
-* [Changing File Structure](#changing-file-structure)
+  + [Getting Started](#getting-started)
+  + [Branching](#branching)
+  + [Making Changes](#changes)
+  + [Merging with Master](#merging)
+  + [Merge Conflicts](#conflicts)
+  + [Changing File Structure](#changing-file-structure)
 
 3. [Git for Collaboration](#git-collaboration)
-* [Further terminology](#further-terminology)
-* [The Timeline](#timeline)
+  + [Further terminology](#further-terminology)
+  + [The Timeline](#timeline)
 
-#### [Resources](#resources)
+4. [Resources](#resources)
 
 <a name="github-flow" id="github-flow"></a>
 ## GitHub Flow
 Start by brushing up on the basic [GitHub workflow](https://guides.github.com/introduction/flow/)
 
-**Branches**
+**Branches**  
 As you work on a git repo the first branch you are on is usually the default branch. This is called `master`. If you start working on a section of the website (say the footer styling), it is best practise to create your own branch for that feature. Creating your own branch is like taking a copy of `master` and renaming it. When you commit, they will now be on that new branch only.
 
 In the sections below we will walk through how to do this. For the meantime, just note that you always have one default branch, and can have as many other branches as needed.
 
 
-**Multiple people working on the same files**
+**Multiple people working on the same files**  
 Version control makes this possible. If you work on one file, and then I work on the same file at the same time when we want to combine our changes git allows us to keep both versions save that we can compare. This allows us to integrate our changes more swiftly.
 
 We will practice with this later.
