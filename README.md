@@ -233,7 +233,7 @@ index.html
 In order to achieve this, `git mv` command comes in handy. Using it to move files *ensures preserving history* of the files you work on. To change file structure like above (and create new folders at the same time) use command:
 ```
 mkdir css && git mv stylesheet.css ./css
-mkdir css && git mv script.js ./js
+mkdir js && git mv script.js ./js
 ```
 (This glues `mkdir` and `git mv` commands together with `&&` operator).
 
