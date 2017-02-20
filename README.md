@@ -1,107 +1,50 @@
-# Introduction to Git and Version Control
+# Learn git
 
-This tutorial is targeted towards the students of courses at [Founders & Coders](http://foundersandcoders.org/). Feedback or Suggestions in the format of an issue or contributions as a pull request are appreciated.
+This workshop is designed for collaborative learning, so grab a partner and use one computer. It has been made for students of [Founders and Coders](www.founderandcoders.com), and therefore assumes that you have:
++ created a one-page website before (as part of the [prerequisites](www.founderandcoders.com/apply))
++ completed lesson 1 of [Udacity's Git and GitHub course](https://www.udacity.com/course/how-to-use-git-and-github--ud775) (as part of the [precourse material](https://github.com/foundersandcoders/master-reference/tree/master/coursebook/precourse))
++ created issues on each other's website (as part of [this accessibilty workshop](https://github.com/jsms90/web-accessibility/blob/master/putting-yourself-in-someone-elses-shoes.md#exercises) on [day 1](https://github.com/foundersandcoders/master-reference/tree/master/coursebook/week-1) of the course)
 
-As a student, if you get stuck at any point, please open an issue and I will try to get back to you as soon as possible. If you would prefer, feel free to contact me on Gitter. When the issue is solved, do think about making a pull request to the project.
-
-The introduction to Git is aimed at the first week of the full time Founders & Coders course, or to those just starting out with git. The hope is that this introduction will cover all you need to know to start collaborating on code with your fellow teammates.
-
-Git for Collaboration is aimed at the second week students of the course, or those that have mastered the first section. Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
-
+**All contributions to this workshop are very welcome!** If you have any suggestions for improvements, please raise an issue. Pull requests are also very much appreciated, but please follow the [contributing guidelines](./CONTRIBUTING.md).
 
 # Contents
-#### [Introduction](#introduction)
-1. [Need to Know Terminology](#terminology)
-2. [Why Version Control](#version-control)
-3. [Tutorial](#tutorial)
-	* [Getting Started](#getting-started)
-	* [Branching](#branching)
-	* [Making Changes](#changes)
-	* [Merging with Master](#merging)
-	* [Merge Conflicts](#conflicts)
-	* [Changing File Structure](#changing-file-structure)
-4. [Introducing Github Flow](#github-flow)
+1. [Introducing Github Flow](#github-flow)
+2. [Tutorial](#tutorial)
+* [Getting Started](#getting-started)
+* [Branching](#branching)
+* [Making Changes](#changes)
+* [Merging with Master](#merging)
+* [Merge Conflicts](#conflicts)
+* [Changing File Structure](#changing-file-structure)
 
-#### [Git for Collaboration](#git-collaboration)
-1. [Further terminology](#further-terminology)
-2. [The Timeline](#timeline)
-3. [Committing](#commits)
-    * [When should you commit](#when-commit)
-    * [Commit messages](#commit-message)
-    * [Merging commits](#merging-commits)
+3. [Git for Collaboration](#git-collaboration)
+* [Further terminology](#further-terminology)
+* [The Timeline](#timeline)
 
 #### [Resources](#resources)
 
+<a name="github-flow" id="github-flow"></a>
+## GitHub Flow
+Start by brushing up on the basic [GitHub workflow](https://guides.github.com/introduction/flow/)
 
-
-<a id="introduction" name="introduction"></a>
-# Introduction
-
-The introduction to Git is aimed at the first week of the full time Founders & Coders course, or to those just starting out with git. The hope is that this introduction will cover all you need to know to start collaborating on code with your fellow teammates.
-
-
-<a id="terminology" name="terminology"></a>
-## Terminology
-
-##### *Repository (repo)*
-Simply put, this is your project folder. This repository can be located locally (in your file system on your computer), or remotely (on Github). Either way, it is the same repository.
-
-##### *Version Control*
-We will use Git for this. A way of keeping track of changes in the code which makes it possible to work with multiple developers on the same repo.
-
-##### *Git*
-A version control system.
-
-##### *Github*
-A remote location where you can store you code, and which all the members of the team have access to. Think of it like a dropbox for code. One of the big differences however is most repositories on github are public. Anybody can see your code.
-
-##### *Commit*
-A way of saving your code at different points along the project. Unlike many tools you may have used however, all commits are saved. This creates a project history and a way to track changes.
-
-##### *Branches*
-As you work on a git repo the first branch you are on is usually the default branch. This is often called `master`. If you start working on a section of the website (say the footer styling), it is best practise to create your own branch for that feature. Creating your own branch is like taking a copy of `master` and renaming it. When you commit, they will now be on that new branch only.
+**Branches**
+As you work on a git repo the first branch you are on is usually the default branch. This is called `master`. If you start working on a section of the website (say the footer styling), it is best practise to create your own branch for that feature. Creating your own branch is like taking a copy of `master` and renaming it. When you commit, they will now be on that new branch only.
 
 In the sections below we will walk through how to do this. For the meantime, just note that you always have one default branch, and can have as many other branches as needed.
 
 
-<a name="version-control" id="version-control"></a>
-## Why Version Control
-
-##### Code Base History
-Git can provide you with a complete history of every commit made on a project. Benefits include:
-
-* Being able to see what differences to the file system you have made before you have commited.
-
-* Being able to see what differences exist between commits
-
-* Being able to move between different commits (or places in time). This is especially useful if something became broken while you were working on it, and you need to start again.
-
-In the introduction section of this tutorial, we won't be able to cover all these benefits in practise extensively. However, we will aim to give you all the information you will need to know by the end.
-
-##### Multiple people working on the same files
+**Multiple people working on the same files**
 Version control makes this possible. If you work on one file, and then I work on the same file at the same time when we want to combine our changes git allows us to keep both versions save that we can compare. This allows us to integrate our changes more swiftly.
 
 We will practice with this later.
-
-##### Branching
-A good work flow with git always involves branching. Having branches helps organise the code, and keep track of who is working on what.
 
 
 <a name="tutorial" id="tutorial"></a>
 ## Tutorial
 
-Before we begin, if you don't have a Github account, please get one.
-
 Next please fork this repository.
 
 ![fork button on github](./img/fork.png)
-
-On your local machine, please make sure you have git installed.
-
-If you are using a mac, the easiest thing is to install git with [Homebrew](http://brew.sh/). Want to learn more about Homebrew? Check out this [tutorial](http://computers.tutsplus.com/tutorials/homebrew-demystified-os-xs-ultimate-package-manager--mac-44884).
-
-Windows use http://git-scm.com/download/win. and Linux install using these instructions http://git-scm.com/download/linux.
-
 
 <a name="getting-started" id="getting-started"></a>
 ### Getting Started
@@ -121,7 +64,7 @@ Next, it is good to get in the habit after each command to use `git status`. Let
 
 ```
 git status
-````
+```
 
 Now check which branch you are on:
 
@@ -310,22 +253,11 @@ The command also takes optional parameters. To find out more, refer to [document
 
 
 
-<a name="github-flow" id="github-flow"></a>
-## Github Flow
-Github flow is what most teams at Founders & Coders follow. It is simple and effective.
-
-For a visual guide, and some helpful tips:
-https://guides.github.com/introduction/flow/
-
-To find out why Github uses Github flow:
-http://scottchacon.com/2011/08/31/github-flow.html
-
-
 
 <a name="git-collaboration" id="git-collaboration"></a>
 # Git for Collaboration
 
-Git for Collaboration is aimed at the second week students of the course, or those that have mastered the first section. Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
+Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
 
 
 <a name="further-terminology" id="further-terminology"></a>
@@ -372,7 +304,7 @@ You should see something like this:
 
 
 Pick the second time commit that you made and copy the hash. Use `q` to exit the log and checkout to your commit.
-Step 4) 
+Step 4)
 ```
 git checkout <commit hash>
 git status
@@ -392,47 +324,6 @@ Next, we should go back to the future. The quickest and easiest way is to checko
 Find the commit name of the last commit you did (the third time that you recorded) and copy the short hash in yellow. Checkout back to that commit, and `git diff timeline-practise` there should be no difference.
 Checkout back to `timeline-practise` and push up to Github to make a pull request to master. Make sure you first check that
 it is up to date with master locally.
-
-
-<a name="commits" id="commits"></a>
-## Committing
-
-
-<a name="when-commit" id="when-commit"></a>
-### When should you commit?
-
-You should aim each commit to be a "safe" version of the project. This means that if you checkout to any commit in your timeline, that should reflect where the project was at that point, and be functional.
-
-Given that, when you commit is very important. I have heard two very useful guidelines.
-
-The first, is that as you complete the task assigned to you, you make several commits at different times during that task. In the end you merge all those commits together to make one very informative commit of that task. I will talk about ways to merge commits together in a later section.
-
-The second method is you work through your task and complete it before adding or committing at all. Then you check the status of the repo and see all the files you have changed. The next step is selectively adding and committing
-
-Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extent of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named.
-
-Likewise, even in pull requests, you must aim to make your commits a clear and concise summary of what tasks where completed on that branch. That way the person reviewing your pull request understands what they will be reviewing before looking at the code itself.
-
-
-<a name="commit-message" id="commit-message"></a>
-### Commit messages
-
-Just like choosing when to commit, and what to commit, it is also important to think about your naming. It is always good to be as descriptive as possible with your commit messages.
-
-Also consider:
-* Present tense for your commit messages
-* If related to an issue on github, should contain issue number
-* The first line should be 50 characters or less. Your message should be brief and to the point.
-* Focus on why you did something, not how you did it
-* Avoid `ands`. If you find yourself wanting to write `and`, you should probably break up that commit into multiple ones.
-
-Remember that the purpose of this commit is to be a message for future you, or your colleagues who may not have known what you are working on. Try to think about your message with this in mind.
-
-Many development teams take it one step further and turn their commit messages into change logs. These change logs may be used for user consumption making it all the more important to have clear messages of what was done for that commit.
-
-I tend to favour one line commits for simplicity, but many schools of thought out there prefer multiline commit messages. For examples of "best practice" formats for this see:
-* [Commit message guidelines Angular](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format)
-* [Informative guidelines, and a cute cat filled slideshow](http://www.slideshare.net/TarinGamberini/commit-messages-goodpractices)
 
 
 <a id="merging-commits" name="merging-commits"></a>
