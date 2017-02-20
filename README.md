@@ -18,7 +18,7 @@ This workshop is designed for collaborative learning, so grab a partner and use 
   + [Changing File Structure](#changing-file-structure)
 
 3. [Git for Collaboration](#git-collaboration)
-  + [Further terminology](#further-terminology)
+  + [Terminology](#terminology)
   + [The Timeline](#timeline)
 
 4. [Resources](#resources)
@@ -30,14 +30,9 @@ Start by brushing up on the basic [GitHub workflow](https://guides.github.com/in
 **Branches**  
 As you work on a git repo the first branch you are on is usually the default branch. This is called `master`. If you start working on a section of the website (say the footer styling), it is best practise to create your own branch for that feature. Creating your own branch is like taking a copy of `master` and renaming it. When you commit, they will now be on that new branch only.
 
-In the sections below we will walk through how to do this. For the meantime, just note that you always have one default branch, and can have as many other branches as needed.
-
 
 **Multiple people working on the same files**  
 Version control makes this possible. If you work on one file, and then I work on the same file at the same time when we want to combine our changes git allows us to keep both versions save that we can compare. This allows us to integrate our changes more swiftly.
-
-We will practice with this later.
-
 
 <a name="tutorial" id="tutorial"></a>
 ## Tutorial
@@ -257,11 +252,8 @@ The command also takes optional parameters. To find out more, refer to [document
 <a name="git-collaboration" id="git-collaboration"></a>
 # Git for Collaboration
 
-Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
-
-
-<a name="further-terminology" id="further-terminology"></a>
-## Further Terminology
+<a name="terminology" id="terminology"></a>
+## Terminology
 
 ##### Commit Hash:
 ![commit hash picture](./img/commit-hash.png)
@@ -273,9 +265,9 @@ Simply put, the HEAD is a reference to a commit object. For more information see
 <a name="timeline" id="timeline"></a>
 ## The Timeline
 
-As discussed previously git stores all the commits on the project. You can use them as a timeline and travel back and forth in time. This section shows you a simple way of doing that which will come in handy as you work in projects with your team.
+As you know from the Udacity course, git stores all the commits on the project. You can use them as a timeline and travel back and forth in time. This section reminds you how to do that, which will come in handy as you work in projects with your team.
 
-Before we start make sure you have a terminal open located at the local copy of this repo. The same one that was used for the first tutorial is essential. Make a new branch called `timeline-practice` and navigate onto it.
+Make a new branch called `timeline-practice` and navigate onto it.
 
 Step 1) Make a new directory in the project via the command line. Lets call it `time`.
 
@@ -292,6 +284,7 @@ open time/newfile.txt
 
 Write the current time stamp, and a short message to your future self. Save it. Next add and commit your changes. Your commit message should be descriptive of what you just did.
 Repeat step 2 twice more, deleting the previous time and message, and adding the new time and a different message. Make sure you add and commit each time. Make sure your commit messages are unique, and you can tell which one was first, second, and third.
+
 Step 3) Next type in this command:
 
 ```
@@ -304,6 +297,7 @@ You should see something like this:
 
 
 Pick the second time commit that you made and copy the hash. Use `q` to exit the log and checkout to your commit.
+
 Step 4)
 ```
 git checkout <commit hash>
@@ -313,7 +307,7 @@ git status
 ![git detached head warning](./img/detached-head.png)
 
 
-As you can see after you checkout a message appears informing your that you are in a 'detached HEAD' state, meaning your are not working on any current branch. Open up the file in the time folder and look at the time and message. It should be the 2nd one that you wrote.
+As you can see after you checkout a message appears informing you that you are in a 'detached HEAD' state, meaning your are not working on any current branch. Open up the file in the time folder and look at the time and message. It should be the 2nd one that you wrote.
 
 Repeat step 4, and use the hash of the first time commit you made. Open the file and see that the time of your first commit, and your message to yourself. This is going back in time. You can easily go back as far as you like in the project and see older iterations of this tutorial!
 
@@ -322,8 +316,7 @@ Next, we should go back to the future. The quickest and easiest way is to checko
 ![git reflog example](./img/git-reflog.png)
 
 Find the commit name of the last commit you did (the third time that you recorded) and copy the short hash in yellow. Checkout back to that commit, and `git diff timeline-practise` there should be no difference.
-Checkout back to `timeline-practise` and push up to Github to make a pull request to master. Make sure you first check that
-it is up to date with master locally.
+Checkout back to `timeline-practise` and push up to Github to make a pull request to master. Make sure you first check that it is up to date with master locally.
 
 
 <a id="merging-commits" name="merging-commits"></a>
