@@ -50,7 +50,7 @@ Then use the command in your terminal:
 git clone https://github.com/NataliaLKB/learn-git-basics.git
 ```
 
-You should now be ablle to redirect into the directory just created using the command line.
+You should now be able to redirect into the directory just created using the command line.
 
 Next, it is good to get in the habit after each command to use `git status`. Let us use it now.
 
