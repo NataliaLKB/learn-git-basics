@@ -50,7 +50,7 @@ Then use the command in your terminal:
 git clone https://github.com/NataliaLKB/learn-git-basics.git
 ```
 
-You should now be ablle to redirect into the directory just created using the command line.
+You should now be able to redirect into the directory just created using the command line.
 
 Next, it is good to get in the habit after each command to use `git status`. Let us use it now.
 
@@ -233,7 +233,7 @@ index.html
 In order to achieve this, `git mv` command comes in handy. Using it to move files *ensures preserving history* of the files you work on. To change file structure like above (and create new folders at the same time) use command:
 ```
 mkdir css && git mv stylesheet.css ./css
-mkdir css && git mv script.js ./js
+mkdir js && git mv script.js ./js
 ```
 (This glues `mkdir` and `git mv` commands together with `&&` operator).
 
@@ -334,7 +334,7 @@ git status
 git log
 ```
 
-Your working directory shouldn't changes, but all the files that you changed should be in green. Your log should have the newest commit as the hash you copied. Even though all your work is still the same as before the reset, the commits are different. Then you can commit again and this is an easy way to replace 2 or more commits with one commit.
+Your working directory shouldn't change, but all the files that you changed should be in green. Your log should have the newest commit as the hash you copied. Even though all your work is still the same as before the reset, the commits are different. Then you can commit again and this is an easy way to replace 2 or more commits with one commit.
 
 
 For more information and techiques see:
