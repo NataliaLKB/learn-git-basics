@@ -22,6 +22,6 @@
 		git mv <source> <destination>
  
  
-##### making a new branch whilst moving into it AT THE SAME TIME
+##### create a new branch whilst moving into it AT THE SAME TIME
 		git checkout -b <new branch name>
 
