@@ -266,7 +266,7 @@ Open up the git cheatsheet, as you can see there are some differences between th
 git diff master
 ```
 
-The differences in green and the additions on this branch, that don't exist on master. The red are the things that are on master, that don't exist on this branch.
+The differences in green are the additions on this branch, that don't exist on master. The red are the things that are on master, that don't exist on this branch.
 
 Merge with master. You should have a git conflict that looks something like this:
 
