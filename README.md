@@ -23,13 +23,15 @@ This workshop has been made for students of [Founders and Coders](www.founderand
 
 <a name="github-flow" id="github-flow"></a>
 ## GitHub Flow
-Version control makes it possible for you and I to work on one file at the same time, because we can keep both our versions saved and then compare them later, once we have each finished our work. This allows us to integrate our changes more swiftly. Most developers use git as their version control system, but different teams use different "workflows". At Founders and Coders, we generally follow something called "GitHub flow", because this flow makes it easy to deploy the latest version of your application very regularly.
+Version control makes it possible for you and I to work on one file at the same time, because we can keep both our versions saved and then compare them once we have each finished our work. This allows us to integrate our changes more swiftly.
 
-You will be using GitHub flow throughout your time on the course. Follow GitHub's [visual guide](https://guides.github.com/introduction/flow/) now to see the steps involved in working on a "feature branch".
+Most developers use git as their version control system, but different teams use different "workflows". At Founders and Coders, we generally follow something called "GitHub flow", because this flow makes it easy to deploy the latest version of your application very regularly. For a fuller explanation, there is a useful article in the resources section below.
 
+To see the steps involved in working on a "feature branch", follow GitHub's [visual guide](https://guides.github.com/introduction/flow/) now.
+
+**What is a branch?**  
 Creating your own "branch" is like taking a copy of `master` and renaming it. When you commit, the changes that you make will only exist on that branch. As you work on a GitHub repo, the first branch you are on is the default branch, called `master`. If you wanted to start working on a new section of the website (say the footer styling), it is best practise to create a new branch for working on that feature.
 
-If you are curious about why this flow was chosen, you can find some links in the resources below.
 
 <a name="tutorial" id="git-basics"></a>
 ## Git Basics
