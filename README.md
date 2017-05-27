@@ -17,6 +17,7 @@ This workshop has been made for students of [Founders and Coders](www.founderand
 3. [Git for Collaboration](#git-collaboration)
   + [Terminology](#terminology)
   + [The Timeline](#timeline)
+  + [Committing](#committing)
 
 4. [Resources](#resources)
 
