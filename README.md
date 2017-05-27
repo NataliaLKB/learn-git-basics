@@ -6,7 +6,7 @@ This workshop has been made for students of [Founders and Coders](www.founderand
 
 # Contents
 1. [Introducing Github Flow](#github-flow)
-2. [Tutorial](#tutorial)
+2. [Git Basics](#git-basics)
   + [Getting Started](#getting-started)
   + [Branching](#branching)
   + [Making Changes](#changes)
@@ -23,17 +23,16 @@ This workshop has been made for students of [Founders and Coders](www.founderand
 
 <a name="github-flow" id="github-flow"></a>
 ## GitHub Flow
-Start by brushing up on the basic [GitHub workflow](https://guides.github.com/introduction/flow/)
+Version control makes it possible for you and I to work on one file at the same time, because we can keep both our versions saved and then compare them later, once we have each finished our work. This allows us to integrate our changes more swiftly. Most developers use git as their version control system, but different teams use different "workflows". At Founders and Coders, we generally follow something called "GitHub flow", because this flow makes it easy to deploy the latest version of your application very regularly.
 
-**Branches**  
-As you work on a git repo the first branch you are on is usually the default branch. This is called `master`. If you start working on a section of the website (say the footer styling), it is best practise to create your own branch for that feature. Creating your own branch is like taking a copy of `master` and renaming it. When you commit, they will now be on that new branch only.
+You will be using GitHub flow throughout your time on the course. Follow GitHub's [visual guide](https://guides.github.com/introduction/flow/) now to see the steps involved in working on a "feature branch".
 
+Creating your own "branch" is like taking a copy of `master` and renaming it. When you commit, the changes that you make will only exist on that branch. As you work on a GitHub repo, the first branch you are on is the default branch, called `master`. If you wanted to start working on a new section of the website (say the footer styling), it is best practise to create a new branch for working on that feature.
 
-**Multiple people working on the same files**  
-Version control makes this possible. If you work on one file, and then I work on the same file at the same time when we want to combine our changes git allows us to keep both versions save that we can compare. This allows us to integrate our changes more swiftly.
+If you are curious about why this flow was chosen, you can find some links in the resources below.
 
-<a name="tutorial" id="tutorial"></a>
-## Tutorial
+<a name="tutorial" id="git-basics"></a>
+## Git Basics
 
 Next please fork this repository.
 
@@ -393,6 +392,7 @@ For more information and techiques see:
 
 > Have you ***found a useful Git or GitHub resource or tutorial? Please let us know*** by creating an issue
 
+* Why you GitHub flow? Read this article from a developer at GitHub: http://scottchacon.com/2011/08/31/github-flow.html
 * For generating ssh keys https://help.github.com/articles/generating-ssh-keys/
 * CodeSchool "Git Real" tutorial: http://gitreal.codeschool.com/
 * Atlassian (makers of *SourceTree*) Git Tutorials: https://www.atlassian.com/git/tutorials/
