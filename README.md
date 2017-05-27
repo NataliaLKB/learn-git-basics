@@ -313,7 +313,49 @@ Next, we should go back to the future. The quickest and easiest way is to checko
 ![git reflog example](./img/git-reflog.png)
 
 Find the commit name of the last commit you did (the third time that you recorded) and copy the short hash in yellow. Checkout back to that commit, and `git diff timeline-practise` there should be no difference.
-Checkout back to `timeline-practise` and push up to Github to make a pull request to master. Make sure you first check that it is up to date with master locally.
+Checkout back to `timeline-practise` and push up to Github to make a pull request to master. Make sure you first check that
+it is up to date with master locally.
+
+
+<a name="commits" id="commits"></a>
+## Committing
+
+
+<a name="when-commit" id="when-commit"></a>
+### When should you commit?
+
+You should aim each commit to be a "safe" version of the project. This means that if you checkout to any commit in your timeline, that should reflect where the project was at that point, and be functional.
+
+Given that, when you commit is very important. I have heard two very useful guidelines.
+
+The first, is that as you complete the task assigned to you, you make several commits at different times during that task. In the end you merge all those commits together to make one very informative commit of that task. I will talk about ways to merge commits together in a later section.
+
+The second method is you work through your task and complete it before adding or committing at all. Then you check the status of the repo and see all the files you have changed. The next step is selectively adding and committing
+
+Through my research I have come across many different methodologies, and ultimately you should try to do what seems the most natural to you. I use both of these methodologies depending on the extent of the task before me. The best thing is to always keep in mind that you and your colleagues will inevitably need to go back to your commits and it will help everyone if commits are aptly named.
+
+Likewise, even in pull requests, you must aim to make your commits a clear and concise summary of what tasks where completed on that branch. That way the person reviewing your pull request understands what they will be reviewing before looking at the code itself.
+
+
+<a name="commit-message" id="commit-message"></a>
+### Commit messages
+
+Just like choosing when to commit, and what to commit, it is also important to think about your naming. It is always good to be as descriptive as possible with your commit messages.
+
+Also consider:
+* Present tense for your commit messages
+* If related to an issue on github, should contain issue number
+* The first line should be 50 characters or less. Your message should be brief and to the point.
+* Focus on why you did something, not how you did it
+* Avoid `ands`. If you find yourself wanting to write `and`, you should probably break up that commit into multiple ones.
+
+Remember that the purpose of this commit is to be a message for future you, or your colleagues who may not have known what you are working on. Try to think about your message with this in mind.
+
+Many development teams take it one step further and turn their commit messages into change logs. These change logs may be used for user consumption making it all the more important to have clear messages of what was done for that commit.
+
+I tend to favour one line commits for simplicity, but many schools of thought out there prefer multiline commit messages. For examples of "best practice" formats for this see:
+* [Commit message guidelines Angular](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format)
+* [Informative guidelines, and a cute cat filled slideshow](http://www.slideshare.net/TarinGamberini/commit-messages-goodpractices)
 
 
 <a id="merging-commits" name="merging-commits"></a>
@@ -334,7 +376,7 @@ git status
 git log
 ```
 
-Your working directory shouldn't change, but all the files that you changed should be in green. Your log should have the newest commit as the hash you copied. Even though all your work is still the same as before the reset, the commits are different. Then you can commit again and this is an easy way to replace 2 or more commits with one commit.
+Your working directory shouldn't changes, but all the files that you changed should be in green. Your log should have the newest commit as the hash you copied. Even though all your work is still the same as before the reset, the commits are different. Then you can commit again and this is an easy way to replace 2 or more commits with one commit.
 
 
 For more information and techiques see:
