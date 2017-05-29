@@ -20,8 +20,6 @@
 
 ##### Moving files while preserving git history
 		git mv <source> <destination>
- 
- 
-##### making a new branch whilst moving into it AT THE SAME TIME
-		git checkout -b <new branch name>
 
+##### Creates a branch, and moves you onto it AT THE SAME TIME
+		git checkout -b <new branch name>

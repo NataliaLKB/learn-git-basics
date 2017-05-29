@@ -1,107 +1,44 @@
-# Introduction to Git and Version Control
+# Learn git
 
-This tutorial is targeted towards the students of courses at [Founders & Coders](http://foundersandcoders.org/). Feedback or Suggestions in the format of an issue or contributions as a pull request are appreciated.
+This workshop has been made for students of [Founders and Coders](www.founderandcoders.com), and therefore assumes that you have completed lesson 1 of [Udacity's Git and GitHub course](https://www.udacity.com/course/how-to-use-git-and-github--ud775) (as part of the [precourse material](https://github.com/foundersandcoders/master-reference/tree/master/coursebook/precourse))
 
-As a student, if you get stuck at any point, please open an issue and I will try to get back to you as soon as possible. If you would prefer, feel free to contact me on Gitter. When the issue is solved, do think about making a pull request to the project.
-
-The introduction to Git is aimed at the first week of the full time Founders & Coders course, or to those just starting out with git. The hope is that this introduction will cover all you need to know to start collaborating on code with your fellow teammates.
-
-Git for Collaboration is aimed at the second week students of the course, or those that have mastered the first section. Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
-
+**All contributions to this workshop are very welcome!** If you have any suggestions for improvements, please raise an [issue](https://github.com/NataliaLKB/learn-git-basics/issues). The author will let you know whether they prefer to make the changes themselves, or whether you are welcome to submit your own PR (Pull Request). If you do make  PR yourself, please follow the Founders and Coders [contributing guidelines](https://github.com/foundersandcoders/master-reference/blob/master/CONTRIBUTING.md).
 
 # Contents
-#### [Introduction](#introduction)
-1. [Need to Know Terminology](#terminology)
-2. [Why Version Control](#version-control)
-3. [Tutorial](#tutorial)
-	* [Getting Started](#getting-started)
-	* [Branching](#branching)
-	* [Making Changes](#changes)
-	* [Merging with Master](#merging)
-	* [Merge Conflicts](#conflicts)
-	* [Changing File Structure](#changing-file-structure)
-4. [Introducing Github Flow](#github-flow)
+1. [Introducing Github Flow](#github-flow)
+2. [Git Basics](#git-basics)
+  + [Getting Started](#getting-started)
+  + [Branching](#branching)
+  + [Making Changes](#changes)
+  + [Merging with Master](#merging)
+  + [Merge Conflicts](#conflicts)
+  + [Changing File Structure](#changing-file-structure)
 
-#### [Git for Collaboration](#git-collaboration)
-1. [Further terminology](#further-terminology)
-2. [The Timeline](#timeline)
-3. [Committing](#commits)
-    * [When should you commit](#when-commit)
-    * [Commit messages](#commit-message)
-    * [Merging commits](#merging-commits)
+3. [Git for Collaboration](#git-collaboration)
+  + [Terminology](#terminology)
+  + [The Timeline](#timeline)
+  + [Committing](#committing)
 
-#### [Resources](#resources)
+4. [Resources](#resources)
 
+<a name="github-flow" id="github-flow"></a>
+## GitHub Flow
+Version control makes it possible for you and I to work on one file at the same time, because we can keep both our versions saved and then compare them once we have each finished our work. This allows us to integrate our changes more swiftly.
 
+[Most developers use git as their version control system](https://rhodecode.com/insights/version-control-systems-2016), but different teams use different "workflows". At Founders and Coders, we generally follow something called "GitHub flow", because this flow makes it easy to deploy the latest version of your application very regularly. For a fuller explanation, there is a useful article in the [resources section](#resources).
 
-<a id="introduction" name="introduction"></a>
-# Introduction
+To see the steps involved in working on a "feature branch", follow GitHub's [visual guide](https://guides.github.com/introduction/flow/) now.
 
-The introduction to Git is aimed at the first week of the full time Founders & Coders course, or to those just starting out with git. The hope is that this introduction will cover all you need to know to start collaborating on code with your fellow teammates.
+**What is a branch?**  
+Creating your own "branch" is like taking a copy of `master` and renaming it. When you commit, the changes that you make will only exist on that branch. As you work on a GitHub repo, the first branch you are on is the default branch, called `master`. If you wanted to start working on a new section of the website (say the footer styling), it is best practise to create a new branch for working on that feature.
 
 
-<a id="terminology" name="terminology"></a>
-## Terminology
-
-##### *Repository (repo)*
-Simply put, this is your project folder. This repository can be located locally (in your file system on your computer), or remotely (on Github). Either way, it is the same repository.
-
-##### *Version Control*
-We will use Git for this. A way of keeping track of changes in the code which makes it possible to work with multiple developers on the same repo.
-
-##### *Git*
-A version control system.
-
-##### *Github*
-A remote location where you can store you code, and which all the members of the team have access to. Think of it like a dropbox for code. One of the big differences however is most repositories on github are public. Anybody can see your code.
-
-##### *Commit*
-A way of saving your code at different points along the project. Unlike many tools you may have used however, all commits are saved. This creates a project history and a way to track changes.
-
-##### *Branches*
-As you work on a git repo the first branch you are on is usually the default branch. This is often called `master`. If you start working on a section of the website (say the footer styling), it is best practise to create your own branch for that feature. Creating your own branch is like taking a copy of `master` and renaming it. When you commit, they will now be on that new branch only.
-
-In the sections below we will walk through how to do this. For the meantime, just note that you always have one default branch, and can have as many other branches as needed.
-
-
-<a name="version-control" id="version-control"></a>
-## Why Version Control
-
-##### Code Base History
-Git can provide you with a complete history of every commit made on a project. Benefits include:
-
-* Being able to see what differences to the file system you have made before you have commited.
-
-* Being able to see what differences exist between commits
-
-* Being able to move between different commits (or places in time). This is especially useful if something became broken while you were working on it, and you need to start again.
-
-In the introduction section of this tutorial, we won't be able to cover all these benefits in practise extensively. However, we will aim to give you all the information you will need to know by the end.
-
-##### Multiple people working on the same files
-Version control makes this possible. If you work on one file, and then I work on the same file at the same time when we want to combine our changes git allows us to keep both versions save that we can compare. This allows us to integrate our changes more swiftly.
-
-We will practice with this later.
-
-##### Branching
-A good work flow with git always involves branching. Having branches helps organise the code, and keep track of who is working on what.
-
-
-<a name="tutorial" id="tutorial"></a>
-## Tutorial
-
-Before we begin, if you don't have a Github account, please get one.
+<a name="tutorial" id="git-basics"></a>
+## Git Basics
 
 Next please fork this repository.
 
 ![fork button on github](./img/fork.png)
-
-On your local machine, please make sure you have git installed.
-
-If you are using a mac, the easiest thing is to install git with [Homebrew](http://brew.sh/). Want to learn more about Homebrew? Check out this [tutorial](http://computers.tutsplus.com/tutorials/homebrew-demystified-os-xs-ultimate-package-manager--mac-44884).
-
-Windows use http://git-scm.com/download/win. and Linux install using these instructions http://git-scm.com/download/linux.
-
 
 <a name="getting-started" id="getting-started"></a>
 ### Getting Started
@@ -115,13 +52,13 @@ Then use the command in your terminal:
 git clone https://github.com/NataliaLKB/learn-git-basics.git
 ```
 
-You should now be ablle to redirect into the directory just created using the command line.
+You should now be able to redirect into the directory just created using the command line.
 
 Next, it is good to get in the habit after each command to use `git status`. Let us use it now.
 
 ```
 git status
-````
+```
 
 Now check which branch you are on:
 
@@ -298,7 +235,7 @@ index.html
 In order to achieve this, `git mv` command comes in handy. Using it to move files *ensures preserving history* of the files you work on. To change file structure like above (and create new folders at the same time) use command:
 ```
 mkdir css && git mv stylesheet.css ./css
-mkdir css && git mv script.js ./js
+mkdir js && git mv script.js ./js
 ```
 (This glues `mkdir` and `git mv` commands together with `&&` operator).
 
@@ -310,26 +247,12 @@ The command also takes optional parameters. To find out more, refer to [document
 
 
 
-<a name="github-flow" id="github-flow"></a>
-## Github Flow
-Github flow is what most teams at Founders & Coders follow. It is simple and effective.
-
-For a visual guide, and some helpful tips:
-https://guides.github.com/introduction/flow/
-
-To find out why Github uses Github flow:
-http://scottchacon.com/2011/08/31/github-flow.html
-
-
 
 <a name="git-collaboration" id="git-collaboration"></a>
 # Git for Collaboration
 
-Git for Collaboration is aimed at the second week students of the course, or those that have mastered the first section. Even though most of the advice in this tutorial will take a while to digest - and practise is essential. A good goal is to understand all these concepts, and implement at least most of these tips in your collaborative projects before finishing your time as a student at Founders & Coders.
-
-
-<a name="further-terminology" id="further-terminology"></a>
-## Further Terminology
+<a name="terminology" id="terminology"></a>
+## Terminology
 
 ##### Commit Hash:
 ![commit hash picture](./img/commit-hash.png)
@@ -341,9 +264,9 @@ Simply put, the HEAD is a reference to a commit object. For more information see
 <a name="timeline" id="timeline"></a>
 ## The Timeline
 
-As discussed previously git stores all the commits on the project. You can use them as a timeline and travel back and forth in time. This section shows you a simple way of doing that which will come in handy as you work in projects with your team.
+As you know from the Udacity course, git stores all the commits on the project. You can use them as a timeline and travel back and forth in time. This section reminds you how to do that, which will come in handy as you work in projects with your team.
 
-Before we start make sure you have a terminal open located at the local copy of this repo. The same one that was used for the first tutorial is essential. Make a new branch called `timeline-practice` and navigate onto it.
+Make a new branch called `timeline-practice` and navigate onto it.
 
 Step 1) Make a new directory in the project via the command line. Lets call it `time`.
 
@@ -360,6 +283,7 @@ open time/newfile.txt
 
 Write the current time stamp, and a short message to your future self. Save it. Next add and commit your changes. Your commit message should be descriptive of what you just did.
 Repeat step 2 twice more, deleting the previous time and message, and adding the new time and a different message. Make sure you add and commit each time. Make sure your commit messages are unique, and you can tell which one was first, second, and third.
+
 Step 3) Next type in this command:
 
 ```
@@ -372,7 +296,8 @@ You should see something like this:
 
 
 Pick the second time commit that you made and copy the hash. Use `q` to exit the log and checkout to your commit.
-Step 4) 
+
+Step 4)
 ```
 git checkout <commit hash>
 git status
@@ -381,7 +306,7 @@ git status
 ![git detached head warning](./img/detached-head.png)
 
 
-As you can see after you checkout a message appears informing your that you are in a 'detached HEAD' state, meaning your are not working on any current branch. Open up the file in the time folder and look at the time and message. It should be the 2nd one that you wrote.
+As you can see after you checkout a message appears informing you that you are in a 'detached HEAD' state, meaning your are not working on any current branch. Open up the file in the time folder and look at the time and message. It should be the 2nd one that you wrote.
 
 Repeat step 4, and use the hash of the first time commit you made. Open the file and see that the time of your first commit, and your message to yourself. This is going back in time. You can easily go back as far as you like in the project and see older iterations of this tutorial!
 
@@ -469,6 +394,7 @@ For more information and techiques see:
 
 > Have you ***found a useful Git or GitHub resource or tutorial? Please let us know*** by creating an issue
 
+* Why you GitHub flow? Read this article from a developer at GitHub: http://scottchacon.com/2011/08/31/github-flow.html
 * For generating ssh keys https://help.github.com/articles/generating-ssh-keys/
 * CodeSchool "Git Real" tutorial: http://gitreal.codeschool.com/
 * Atlassian (makers of *SourceTree*) Git Tutorials: https://www.atlassian.com/git/tutorials/
