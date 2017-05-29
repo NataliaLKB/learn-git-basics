@@ -25,7 +25,7 @@ This workshop has been made for students of [Founders and Coders](www.founderand
 ## GitHub Flow
 Version control makes it possible for you and I to work on one file at the same time, because we can keep both our versions saved and then compare them once we have each finished our work. This allows us to integrate our changes more swiftly.
 
-Most developers use git as their version control system, but different teams use different "workflows". At Founders and Coders, we generally follow something called "GitHub flow", because this flow makes it easy to deploy the latest version of your application very regularly. For a fuller explanation, there is a useful article in the resources section below.
+[Most developers use git as their version control system](https://rhodecode.com/insights/version-control-systems-2016), but different teams use different "workflows". At Founders and Coders, we generally follow something called "GitHub flow", because this flow makes it easy to deploy the latest version of your application very regularly. For a fuller explanation, there is a useful article in the [resources section](#resources).
 
 To see the steps involved in working on a "feature branch", follow GitHub's [visual guide](https://guides.github.com/introduction/flow/) now.
 
