@@ -1,6 +1,6 @@
 # Learn git
 
-This workshop has been made for students of [Founders and Coders](www.founderandcoders.com), and therefore assumes that you have completed lesson 1 of [Udacity's Git and GitHub course](https://www.udacity.com/course/how-to-use-git-and-github--ud775) (as part of the [precourse material](https://github.com/foundersandcoders/master-reference/tree/master/coursebook/precourse))
+This workshop has been made for students of [Founders & Coders](https://www.foundersandcoders.com), and therefore assumes that you have completed lesson 1 of [Udacity's Git and GitHub course](https://www.udacity.com/course/how-to-use-git-and-github--ud775) (as part of the [precourse material](https://github.com/foundersandcoders/master-reference/tree/master/coursebook/precourse))
 
 **All contributions to this workshop are very welcome!** If you have any suggestions for improvements, please raise an [issue](https://github.com/NataliaLKB/learn-git-basics/issues). The author will let you know whether they prefer to make the changes themselves, or whether you are welcome to submit your own PR (Pull Request). If you do make  PR yourself, please follow the Founders and Coders [contributing guidelines](https://github.com/foundersandcoders/master-reference/blob/master/CONTRIBUTING.md).
 
