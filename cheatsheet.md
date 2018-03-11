@@ -6,9 +6,11 @@
 ##### Checking that status of your local repository - shows changed but not added files in red
 		git status
 
-##### Creating a new branch for you to work on
+##### Creating a new branch for you to work on 
 		git branch <new branch name>
 
+##### Frs creates a branch, and moves you onto it at the same time
+		git checkout -b <new branch name>
 ##### See all branches in your remote repository
 		git branch -a
 
