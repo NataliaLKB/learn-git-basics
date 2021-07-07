@@ -10,7 +10,7 @@
         git fetch --all
 
 ##### Checking that status of your local repository - shows changed but not added files in red
-		git status
+	git status
 
 ##### Moving your changes to the staging area
         git add <file name>
@@ -31,7 +31,7 @@
         git pull origin <branch name>
 
 ##### Moving files while preserving git history
-		git mv <source> <destination>
+	git mv <source> <destination>
 
 ##### Creates a branch, and moves you onto it AT THE SAME TIME
-		git checkout -b <new branch name
+	git checkout -b <new branch name
