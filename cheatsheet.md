@@ -23,3 +23,6 @@
 
 ##### Creates a branch, and moves you onto it AT THE SAME TIME
 		git checkout -b <new branch name>
+
+##### Creates, names and pushes existing branch to GitHub
+		git push origin <branch name>
