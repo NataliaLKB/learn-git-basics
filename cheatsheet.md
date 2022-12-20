@@ -26,3 +26,6 @@
 
 ##### Creates a branch, and moves you onto it AT THE SAME TIME
 		git checkout -b <new branch name>
+
+##### This command is used to check the commit history.
+		git log
