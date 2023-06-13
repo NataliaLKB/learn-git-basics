@@ -23,3 +23,6 @@
 
 ##### Creates a branch, and moves you onto it AT THE SAME TIME
 		git checkout -b <new branch name>
+
+##### Show changes in files in the current branch
+		git status
