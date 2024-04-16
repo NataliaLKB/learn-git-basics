@@ -23,3 +23,15 @@
 
 ##### Creates a branch, and moves you onto it AT THE SAME TIME
 		git checkout -b <new branch name>
+
+##### Moves changes to staging
+		git add <new branch name>
+
+##### Commits changes
+		git commit -m 'explanation of change'
+
+##### To merge with master
+		git checkout master
+		git pull origin master
+		git checkout update-cheatsheet
+		git merge master
